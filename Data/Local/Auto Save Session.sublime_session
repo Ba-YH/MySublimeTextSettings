@@ -1,10 +1,10 @@
 {
 	"file_history":
 	[
-		"/D/sofewares/SublimeText/Data/Packages/User/snippet/cp.sublime-snippet",
-		"/D/sofewares/SublimeText/Data/Packages/User/snippet/read.sublime-snippet",
 		"/D/sofewares/SublimeText/Data/Packages/User/Default (Windows).sublime-keymap",
 		"/D/sofewares/SublimeText/Data/Packages/Default/Default (Windows).sublime-keymap",
+		"/D/sofewares/SublimeText/Data/Packages/User/snippet/cp.sublime-snippet",
+		"/D/sofewares/SublimeText/Data/Packages/User/snippet/read.sublime-snippet",
 		"/D/sofewares/SublimeText/Data/Packages/SublimeLinter/keymaps/Default (Windows).sublime-keymap",
 		"/D/sofewares/SublimeText/Data/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 		"/D/sofewares/SublimeText/Data/Packages/User/SublimeLinter.sublime-settings",
@@ -49,9 +49,9 @@
 	[
 	],
 	"last_version": 4164,
-	"last_window_id": 69,
+	"last_window_id": 70,
 	"log_indexing": false,
-	"next_update_check": 1699698142,
+	"next_update_check": 1699784542,
 	"settings":
 	{
 		"new_window_full_screen": false,
@@ -68,6 +68,10 @@
 			{
 				"selected_items":
 				[
+					[
+						"A",
+						"all"
+					]
 				]
 			},
 			"build_system_choices":
@@ -172,13 +176,13 @@
 				"/D/sofewares/SublimeText/Data/Packages/User/Default (Windows).sublime-keymap",
 				"/D/sofewares/SublimeText/Data/Packages/Default/Default (Windows).sublime-keymap",
 				"/D/Code/SublimeWorkspaces/Luogu/example.cpp",
+				"/D/sofewares/SublimeText/Data/Packages/User/snippet/cp.sublime-snippet",
+				"/D/sofewares/SublimeText/Data/Packages/User/snippet/read.sublime-snippet",
 				"/D/sofewares/SublimeText/Data/Packages/User/SublimeLinter.sublime-settings",
 				"/D/sofewares/SublimeText/Data/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 				"/D/sofewares/SublimeText/Data/Packages/SublimeLinter-gcc/miscellaneous/demo.cpp",
 				"/D/sofewares/SublimeText/Data/Packages/SublimeLinter-gcc/README.md",
 				"/D/Code/SublimeWorkspaces/Luogu/c.cpp",
-				"/D/sofewares/SublimeText/Data/Packages/User/snippet/cp.sublime-snippet",
-				"/D/sofewares/SublimeText/Data/Packages/User/snippet/read.sublime-snippet",
 				"/D/sofewares/SublimeText/Data/Packages/User/snippet/hello..sublime-snippet",
 				"/D/sofewares/SublimeText/Data/Packages/delete_exe_cpp_tests.sublime-build",
 				"/D/Code/SublimeWorkspaces/Luogu/a.cpp",
@@ -199,7 +203,7 @@
 			],
 			"find":
 			{
-				"height": 40.0
+				"height": 27.2
 			},
 			"find_in_files":
 			{
@@ -213,7 +217,6 @@
 				"case_sensitive": false,
 				"find_history":
 				[
-					"ctr+k"
 				],
 				"highlight": true,
 				"in_selection": false,
@@ -249,7 +252,7 @@
 			},
 			"output.exec":
 			{
-				"height": 31.0
+				"height": 32.0
 			},
 			"output.find_results":
 			{
@@ -9927,6 +9930,376 @@
 					]
 				},
 				{
+					"file": "/D/sofewares/SublimeText/Readme.md",
+					"settings":
+					{
+						"buffer_size": 847,
+						"encoding": "UTF-8",
+						"line_ending": "Windows"
+					},
+					"undo_stack":
+					[
+						[
+							50,
+							1,
+							"left_delete",
+							null,
+							"AQAAAN4AAAAAAAAA3gAAAAAAAAADAAAA77yM",
+							"AQAAAAAAAAABAAAA3wAAAAAAAADfAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							51,
+							13,
+							"left_delete",
+							null,
+							"DQAAAN0AAAAAAAAA3QAAAAAAAAADAAAA5Lu23AAAAAAAAADcAAAAAAAAAAMAAADmj5LbAAAAAAAAANsAAAAAAAAAAwAAAOS6htoAAAAAAAAA2gAAAAAAAAADAAAA6b2Q2QAAAAAAAADZAAAAAAAAAAMAAADphY3YAAAAAAAAANgAAAAAAAAAAQAAAHLXAAAAAAAAANcAAAAAAAAAAQAAAG/WAAAAAAAAANYAAAAAAAAAAQAAAHTVAAAAAAAAANUAAAAAAAAAAQAAAGnUAAAAAAAAANQAAAAAAAAAAQAAAGTTAAAAAAAAANMAAAAAAAAAAQAAAGXSAAAAAAAAANIAAAAAAAAAAQAAAC3RAAAAAAAAANEAAAAAAAAAAQAAAHA",
+							"AQAAAAAAAAABAAAA3gAAAAAAAADeAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							52,
+							1,
+							"left_delete",
+							null,
+							"AQAAANAAAAAAAAAA0AAAAAAAAAABAAAAYw",
+							"AQAAAAAAAAABAAAA0QAAAAAAAADRAAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							63,
+							1,
+							"insert",
+							{
+								"characters": "."
+							},
+							"AQAAABgBAAAAAAAAGQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAGAEAAAAAAAAYAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							66,
+							1,
+							"left_delete",
+							null,
+							"AQAAABgBAAAAAAAAGAEAAAAAAAABAAAALg",
+							"AQAAAAAAAAABAAAAGQEAAAAAAAAZAQAAAAAAAAAAAAAAoGxA"
+						],
+						[
+							67,
+							1,
+							"insert",
+							{
+								"characters": "."
+							},
+							"AQAAABgBAAAAAAAAGQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAGAEAAAAAAAAYAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							68,
+							1,
+							"left_delete",
+							null,
+							"AQAAABgBAAAAAAAAGAEAAAAAAAABAAAALg",
+							"AQAAAAAAAAABAAAAGQEAAAAAAAAZAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							69,
+							1,
+							"",
+							null,
+							"AQAAABgBAAAAAAAAGQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAGAEAAAAAAAAYAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							72,
+							1,
+							"insert",
+							{
+								"characters": "jian"
+							},
+							"BAAAAC8BAAAAAAAAMAEAAAAAAAAAAAAAMAEAAAAAAAAxAQAAAAAAAAAAAAAxAQAAAAAAADIBAAAAAAAAAAAAADIBAAAAAAAAMwEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							73,
+							4,
+							"left_delete",
+							null,
+							"BAAAADIBAAAAAAAAMgEAAAAAAAABAAAAbjEBAAAAAAAAMQEAAAAAAAABAAAAYTABAAAAAAAAMAEAAAAAAAABAAAAaS8BAAAAAAAALwEAAAAAAAABAAAAag",
+							"AQAAAAAAAAABAAAAMwEAAAAAAAAzAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							74,
+							1,
+							"",
+							null,
+							"AQAAAC8BAAAAAAAAMQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							75,
+							1,
+							"",
+							null,
+							"AQAAADEBAAAAAAAAMgEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAMQEAAAAAAAAxAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							76,
+							3,
+							"left_delete",
+							null,
+							"AwAAADEBAAAAAAAAMQEAAAAAAAADAAAA55qEMAEAAAAAAAAwAQAAAAAAAAMAAADku4svAQAAAAAAAC8BAAAAAAAAAwAAAOeugA",
+							"AQAAAAAAAAABAAAAMgEAAAAAAAAyAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							78,
+							1,
+							"",
+							null,
+							"AQAAAC8BAAAAAAAAMQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							79,
+							1,
+							"",
+							null,
+							"AQAAADEBAAAAAAAAMgEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAMQEAAAAAAAAxAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							80,
+							3,
+							"left_delete",
+							null,
+							"AwAAADEBAAAAAAAAMQEAAAAAAAADAAAA55qEMAEAAAAAAAAwAQAAAAAAAAMAAADmjqUvAQAAAAAAAC8BAAAAAAAAAwAAAOmXtA",
+							"AQAAAAAAAAABAAAAMgEAAAAAAAAyAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							81,
+							1,
+							"",
+							null,
+							"AQAAAC8BAAAAAAAAMQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							82,
+							1,
+							"",
+							null,
+							"AQAAADEBAAAAAAAAMgEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAMQEAAAAAAAAxAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							83,
+							1,
+							"",
+							null,
+							"AQAAADIBAAAAAAAANAEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAMgEAAAAAAAAyAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							84,
+							1,
+							"",
+							null,
+							"AQAAADQBAAAAAAAANQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAANAEAAAAAAAA0AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							85,
+							6,
+							"left_delete",
+							null,
+							"BgAAADQBAAAAAAAANAEAAAAAAAADAAAA55qEMwEAAAAAAAAzAQAAAAAAAAMAAADnoIEyAQAAAAAAADIBAAAAAAAAAwAAAOS7ozEBAAAAAAAAMQEAAAAAAAADAAAA55qEMAEAAAAAAAAwAQAAAAAAAAMAAADmtIEvAQAAAAAAAC8BAAAAAAAAAwAAAOeugA",
+							"AQAAAAAAAAABAAAANQEAAAAAAAA1AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							86,
+							1,
+							"",
+							null,
+							"AQAAAC8BAAAAAAAAMAEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							87,
+							1,
+							"left_delete",
+							null,
+							"AQAAAC8BAAAAAAAALwEAAAAAAAADAAAA55qE",
+							"AQAAAAAAAAABAAAAMAEAAAAAAAAwAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							88,
+							1,
+							"",
+							null,
+							"AQAAAC8BAAAAAAAAMgEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							89,
+							3,
+							"left_delete",
+							null,
+							"AwAAADEBAAAAAAAAMQEAAAAAAAADAAAA5ZywMAEAAAAAAAAwAQAAAAAAAAMAAADpgJ8vAQAAAAAAAC8BAAAAAAAAAwAAAOW/qw",
+							"AQAAAAAAAAABAAAAMgEAAAAAAAAyAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							90,
+							1,
+							"",
+							null,
+							"AQAAAC8BAAAAAAAAMQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							91,
+							2,
+							"left_delete",
+							null,
+							"AgAAADABAAAAAAAAMAEAAAAAAAADAAAA6YCfLwEAAAAAAAAvAQAAAAAAAAMAAADlv6s",
+							"AQAAAAAAAAABAAAAMQEAAAAAAAAxAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							92,
+							1,
+							"",
+							null,
+							"AQAAAC8BAAAAAAAAMQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							93,
+							2,
+							"left_delete",
+							null,
+							"AgAAADABAAAAAAAAMAEAAAAAAAADAAAA6YCfLwEAAAAAAAAvAQAAAAAAAAMAAADlv6s",
+							"AQAAAAAAAAABAAAAMQEAAAAAAAAxAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							94,
+							1,
+							"",
+							null,
+							"AQAAAC8BAAAAAAAAMQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							95,
+							1,
+							"",
+							null,
+							"AQAAADEBAAAAAAAAMwEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAMQEAAAAAAAAxAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							96,
+							2,
+							"left_delete",
+							null,
+							"AgAAADIBAAAAAAAAMgEAAAAAAAADAAAA5Z+OMQEAAAAAAAAxAQAAAAAAAAMAAADnlLM",
+							"AQAAAAAAAAABAAAAMwEAAAAAAAAzAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							97,
+							1,
+							"",
+							null,
+							"AQAAADEBAAAAAAAAMwEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAMQEAAAAAAAAxAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							98,
+							1,
+							"",
+							null,
+							"AQAAADMBAAAAAAAANQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAMwEAAAAAAAAzAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							99,
+							1,
+							"",
+							null,
+							"AQAAADUBAAAAAAAANwEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAANQEAAAAAAAA1AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							100,
+							1,
+							"",
+							null,
+							"AQAAADcBAAAAAAAAOAEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAANwEAAAAAAAA3AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							101,
+							1,
+							"",
+							null,
+							"AQAAADgBAAAAAAAAOgEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAOAEAAAAAAAA4AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							102,
+							1,
+							"",
+							null,
+							"AQAAADoBAAAAAAAAPAEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAOgEAAAAAAAA6AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							103,
+							1,
+							"",
+							null,
+							"AQAAADwBAAAAAAAAPQEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAPAEAAAAAAAA8AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							104,
+							1,
+							"",
+							null,
+							"AQAAAD0BAAAAAAAAPwEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAPQEAAAAAAAA9AQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							106,
+							1,
+							"",
+							null,
+							"AQAAAEIBAAAAAAAARAEAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAQgEAAAAAAABCAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							108,
+							1,
+							"left_delete",
+							null,
+							"AQAAAEQBAAAAAAAARAEAAAAAAAADAAAA5piv",
+							"AQAAAAAAAAABAAAARQEAAAAAAABFAQAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							120,
+							1,
+							"left_delete",
+							null,
+							"AQAAAFQBAAAAAAAAVAEAAAAAAAABAAAACg",
+							"AQAAAAAAAAABAAAAVQEAAAAAAABVAQAAAAAAAAAAAAAA4GVA"
+						],
+						[
+							124,
+							1,
+							"left_delete",
+							null,
+							"AQAAAJEBAAAAAAAAkQEAAAAAAAABAAAACg",
+							"AQAAAAAAAAABAAAAkgEAAAAAAACSAQAAAAAAAAAAAAAAAE5A"
+						]
+					]
+				},
+				{
 					"contents": "\n25 5 2\n2\n11\n14\n17\n21\n\n10\n\n",
 					"settings":
 					{
@@ -10482,12 +10855,12 @@
 				"selected_items":
 				[
 					[
-						"package",
-						"Package Control: Disable Package"
-					],
-					[
 						"install",
 						"Package Control: Install Package"
+					],
+					[
+						"package",
+						"Package Control: Disable Package"
 					],
 					[
 						"sublime",
@@ -10602,7 +10975,6 @@
 						{
 							"buffer": 0,
 							"file": "/D/Code/SublimeWorkspaces/Luogu/example.cpp",
-							"selected": true,
 							"semi_transient": false,
 							"settings":
 							{
@@ -10624,7 +10996,39 @@
 									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
-								"translation.y": 254.4,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"stack_multiselect": false,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/D/sofewares/SublimeText/Readme.md",
+							"selected": true,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 847,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										847,
+										847
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+									"tab_size": 3,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
@@ -10637,7 +11041,7 @@
 					"sheets":
 					[
 						{
-							"buffer": 1,
+							"buffer": 2,
 							"selected": true,
 							"semi_transient": false,
 							"settings":
@@ -10729,7 +11133,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,2,3,-1,-1,-1,-1,749,91,91,906,b768be2b42122643a2e6d65e3caea929",
+			"position": "0,2,3,-32000,-32000,-1,-1,749,91,91,906,b768be2b42122643a2e6d65e3caea929",
 			"project": "",
 			"replace":
 			{
