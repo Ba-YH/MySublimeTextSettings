@@ -3,7 +3,7 @@
 包含`FastOlympicCoding`,`FastOlympicCodingHook`,`sublimelinter`,`sublimelinter-gcc`等刷题用插件<br>和一些基础配置(包括`git`,`ConvertUTF-8`等)
 ## 为什么选择 SublimeText
 从cp-editor转过来，一个很让人头疼的原因是，cp-editor配置clang后的语法检查依然非常的鸡肋，没有具体的错误信息页没有快捷键支持。代码片段的导入也差点意思。
-当然，如果你还不了解cp-editor,它快速导入测试样例和远程提交的特色或许会成为你不错的选择。
+当然，如果你还不了解[cp-editor](https://cpeditor.org/zh/),它快速导入测试样例和远程提交的特色或许会成为你不错的选择。
 
 ## 使用说明
 绿色版，git clone或者下载压缩包，点击`sublime_text.exe`即可运行
