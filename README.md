@@ -14,6 +14,6 @@
 3. 运行测试用例 `ctrl+'` 
 <br>在 `SublimeText\Data\Packages\CppFastOlympicCoding\Default(windows).sublime-keymap`中修改
    **！！注意，如果你用Vscode或者sublime打开是空白！！不要保存，修改后缀为txt修改内容后保存**
-4. g++语法检查器，`ctrl+k`开始检查，然后`ctrl+shift+a`可以看到详细错误提示
+4. g++语法检查器，`ctrl+k`开始检查，然后`ctrl+shift+a`可以看到详细错误提示<br>
    在`设置->packages settings->sublimelinet->key bindings`进行修改
 5. 下载FiraCode字体，[FiraCode](https://github.com/tonsky/FiraCode)下载右键安装即可，如果不想使用，记得在用户设置中修改
