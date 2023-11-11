@@ -1,0 +1,6 @@
+{
+    "cmd": ["powershell", "-Command","Remove-Item -Path '${file_path}\\*.exe', '${file_path}\\*.cpp__tests' -Force"],
+    "working_dir": "${file_path:${folder}}",
+    "selector": "source",
+    "shell": true
+}

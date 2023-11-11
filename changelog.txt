@@ -1,0 +1,1895 @@
+<style>
+html {
+    background-color: var(--background);
+    margin: 16px;
+}
+body {
+    color: var(--foreground);
+    font-family: "Open Sans", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+li { margin: 2px; }
+li ul {
+    margin: 2px 0 4px;
+}
+ul.topic {
+    margin-top: 0;
+    padding-left: 1.5rem;
+}
+ul.topic ul {
+    margin: 0.2em 0;
+}
+
+h1 {
+    color: color(var(--foreground) l(- 10%));
+    font-size: 2.0rem;
+    margin: 0;
+}
+html.dark h1 {
+    color: color(var(--foreground) l(+ 10%));
+}
+h2 {
+    color: color(var(--foreground) a(0.9));
+    font-size: 1.4rem;
+    margin: 1em 0 0.1em 0;
+}
+a {
+    color: var(--bluish);
+}
+article { display: block; }
+.release-date, .forum-link {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: color(var(--foreground) a(0.7));
+}
+tt {
+    font-size: 0.9em;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.08);
+    padding: 0 4px;
+}
+html.dark tt {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+</style>
+
+<h1>Dev Channel Changelog</h1>
+
+<article class="current">
+<h2>Build 4164</h2>
+<div class="release-date">8 Nov 2023</div>
+<ul>
+    <li>Fixed an issue where animations were causing excessive redraws</li>
+    <li>Fixed some symbols being omitted from index</li>
+    <li>Fixed crash when switching projects before index was initialized</li>
+    <li>Added <tt>"ruler_width"</tt> setting</li>
+    <li>Fixed color emoji blending with transparency</li>
+    <li>Fixed line-number alignment when using a variable-width font</li>
+    <li>Fixed <tt>run_syntax_tests</tt> command not running symbol tests</li>
+    <li>API: Removed delay when querying auto-complete during an ongoing query</li>
+    <li>API: <tt>sublime_plugin.ListInputHandler</tt> now supports <tt>initial_selection</tt></li>
+    <li>Linux: Improved tracking of fullscreen state</li>
+    <li>Windows: Added CRLF handling for text drag an drop</li>
+    <li>Windows: Fixed wrong font extents causing glyphs to be cut off at the top</li>
+    <li>Windows: Fixed caret movement across phantoms when using fractional scaling</li>
+    <li>Mac: Implemented window cascading</li>
+    <li>Mac: Recent files are now cleared when <tt>"update_system_recent_files"</tt> is disabled</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4160</h2>
+<div class="release-date">21 Oct 2023</div>
+<ul>
+    <li>Fixed an indexing crash with very long symbol names</li>
+    <li>Fixed an indexing race condition</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4159</h2>
+<div class="release-date">20 Oct 2023</div>
+<ul>
+    <li>Fixed a crash regression in 4158</li>
+    <li>API: Fixed <tt>sublime.choose_font_dialog</tt> not working in python 3.3 environment</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4158</h2>
+<div class="release-date">19 Oct 2023</div>
+<ul>
+    <li>Various syntax highlighting improvements</li>
+    <li>Find in files now truncates long lines according to the <tt>"find_in_files_context_characters"</tt> setting</li>
+    <li>Index collation is now done incrementally</li>
+    <li>Fixed auto-complete not suggesting tokens from the current line</li>
+    <li>Added <i>Copy Path</i> to Sidebar context menu</li>
+    <li>Fixed case where opening a file from Sublime Merge wouldn't jump to the right line</li>
+    <li>Choose font dialog now has the currently configured font initially selected</li>
+    <li>Fixed a number of crashes</li>
+    <li>API: Fixed instability related to overlapping API calls</li>
+    <li>API: Fixed <tt>ListInputHandler</tt> not selecting the first result when <tt>initial_text</tt> is provided</li>
+    <li>API: Fixed crash when an edit token is passed to the wrong view</li>
+    <li>Linux: Fixed some memory leaks related to fonts</li>
+    <li>Linux: Font chooser dialog now only shows font families</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4156</h2>
+<div class="release-date">18 Sep 2023</div>
+<ul>
+    <li>Added <i>Preferences > Font > Choose…</i> for an easy way to select a font</li>
+    <li>Fixed a memory corruption bug related to block carets</li>
+    <li>API: Added <tt>sublime.choose_font_dialog</tt></li>
+    <li>API: Added <tt>update_text</tt> option to <tt>sublime.encode_value</tt></li>
+    <li>Linux: Fixed <tt>"ui_scale"</tt> setting not being applied to fonts correctly in some cases</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4155</h2>
+<div class="release-date">24 Aug 2023</div>
+<ul>
+    <li>Improved behavior of Indent command on empty lines</li>
+    <li>Improved bookmark toggling</li>
+    <li>Fixed an auto-indent issue</li>
+    <li>Fixed an issue with <tt>find_under_expand</tt> when the find panel is focused</li>
+    <li>Fixed a number of crashes</li>
+    <li>Updated to OpenSSL 1.1.1v</li>
+    <li>API: Fixed <tt>expand_to_paragraph</tt> in <tt>paragraph.py</tt> incorrectly unpacking tuple</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4154</h2>
+<div class="release-date">8 Aug 2023</div>
+<ul>
+    <li>Fixed a Goto Anything regression in 4153</li>
+    <li>Mac: Fixed crash in 4153 when closing a window while an animation is playing</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4153</h2>
+<div class="release-date">8 Aug 2023</div>
+<ul>
+    <li>Fixed double clicking a find in file result sometimes scrolling to the wrong line in the file</li>
+    <li>Fixed minimap border not rendering</li>
+    <li>Added <i>Mouse Bindings</i> to the <i>Preferences</i> menu</li>
+    <li>Improved <i>Join Lines</i> behavior</li>
+    <li>Improved performance of "Definitions" popup</li>
+    <li>Fixed case conversions not taking all-caps into account</li>
+    <li>Fixed disabling <tt>"highlight_gutter"</tt> resulting in <tt>"highlight_line"</tt> begin disabled</li>
+    <li>Fixed some incorrect behavior when converting a multi-line selection to Title Case</li>
+    <li>Fixed <i>Quick Switch Project…</i> from the settings window closing the window</li>
+    <li>Fixed <tt>"move_to_limit_on_up_down"</tt> setting not working</li>
+    <li>Added <tt>current_result</tt> command</li>
+    <li><i>Shift+Enter</i> now also hides the incremental find panel</li>
+    <li>Fixed macro recording in Vintage package not working</li>
+    <li>API: Allow case insensitive comments using <tt>TM_COMMENT_CASE_INSENSITIVE</tt></li>
+    <li>API: Fixed some issues related to plugin initialization</li>
+    <li>Mac: Improved animation frame timing</li>
+    <li>Mac: Fixed <i>Copy as HTML</i> not working</li>
+    <li>Mac: Fixed <tt>subl</tt> not always finding the correct application bundle</li>
+    <li>Mac: Fixed <tt>"regex_auto_escape"</tt> not working</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4150</h2>
+<div class="release-date">11 May 2023</div>
+<ul>
+    <li>Fixed regression where syntax highlighting could break</li>
+    <li>Fixed drag selecting columns not respecting line padding</li>
+    <li>Fixed soft warp regression</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4149</h2>
+<div class="release-date">4 May 2023</div>
+<ul>
+    <li>Various syntax highlighting improvements</li>
+    <li>Find in Files now supports quoting paths</li>
+    <li>Fixed minimap viewport opacity attribute not being respected</li>
+    <li>Fixed edge case that could break syntax highlighting</li>
+    <li>Added <tt>"find_in_files_suppress_errors"</tt> and <tt>"find_in_files_context_lines"</tt> settings</li>
+    <li>Fixed <tt>"draw_centered"</tt> setting causing incorrect gutter rendering in some cases</li>
+    <li>Fixed scrolling by page not always including a full line of context</li>
+    <li>Fixed recent file list not being updated when quitting with hot exit disabled</li>
+    <li>Improved performance when drag selecting columns</li>
+    <li>Fixed find in selection skipping empty selections</li>
+    <li>Improved caret positioning when using text wrapping</li>
+    <li>Fixed column number in the status bar not updating upon changing tab width</li>
+    <li>Fixed empty scope selectors not matching correctly</li>
+    <li>Fixed high memory usage edge case in minihtml parsing</li>
+    <li>API: Added support for the <tt>"context"</tt> key in mousemaps</li>
+    <li>API: The <tt>open_file</tt> command now supports <tt>"transient"</tt>, <tt>"force_group"</tt>, <tt>"clear_to_right"</tt> and <tt>"force_clone"</tt> arguments</li>
+    <li>Linux: Files for printing are saved in <tt>~/Downloads</tt> if possible to work around snap/flatpak limitations</li>
+    <li>Linux: User config and cache paths are now created at startup if not present</li>
+    <li>Mac: System setting <em>"click in the scroll bar to"</em> is now respected</li>
+    <li>Windows: Added <tt>alt+shift+p</tt> as default keybinding for Quick Switch Project</li>
+    <li>Windows: Fixed tooltips sometimes not being removed</li>
+    <li>Windows: Fixed select folder dialog not respecting the initial directory</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4148</h2>
+<div class="release-date">14 Mar 2023</div>
+<ul>
+    <li>Various syntax highlighting improvements</li>
+    <li>Last tab in a group can now be selected with <tt>alt+9</tt> (Windows/Linux) and <tt>cmd+9</tt> (Mac)</li>
+    <li><em>Split View</em> retains the original view's viewport position</li>
+    <li>The window title now indicates whether Sublime Text is running with administrator privileges</li>
+    <li>Improved indentation detection for files with many single space indents</li>
+    <li>Fixed first character beyond ASCII range not being decoded/encoded for short code pages</li>
+    <li>Find in Files no longer cancels ongoing search with a renamed buffer</li>
+    <li>Fixed regression where <tt>./</tt> wouldn't work in the "Where" field of find-in-files</li>
+    <li>Fixed find settings confusion when run immediately after <tt>find_under_expand</tt></li>
+    <li>Fixed minimap viewport highlighting not working when color schemes specify a text background</li>
+    <li><em>Reopen Closed File</em> now uses the window's file history by default rather than global history</li>
+    <li>Fixed annotations displaying incorrectly when <tt>"ui_scale"</tt> is set to something other than <tt>1</tt></li>
+    <li>Fixed issue where the command palette could consume key presses while not having input focus</li>
+    <li>Fixed syntax-based folding not working correctly with some indented code</li>
+    <li>Fixed backtracking bug where tokens were being dropped</li>
+    <li>Fixed some hangs caused by syntax backtracking</li>
+    <li>Fixed tabs of deleted files incorrectly showing as modified in some cases</li>
+    <li>Fixed word wrap wrapping early in some cases</li>
+    <li>API: Added <tt>Window.num_views_in_group</tt></li>
+    <li>API: Fixed inconsistent focus after <tt>Window.open_file</tt></li>
+    <li>Mac: Better support for running as root</li>
+    <li>Mac: Added workaround for Monterey bug causing scrolling to misbehave</li>
+    <li>Linux: Fixed incorrect mouse behavior at window edges</li>
+    <li>Linux, Mac: Attempt to find the license key for the user when using sudo</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4147</h2>
+<div class="release-date">22 Dec 2022</div>
+<ul>
+    <li>Improved minimap viewport contrast with large amounts of visible text</li>
+    <li>Fixed issues related to windows file descriptors with python 3.3 plugins</li>
+    <li>Fixed crash regression with find-in-files when an invalid regex is used</li>
+    <li>Fixed regression with tab ordering</li>
+    <li>Fixed goto-symbol not showing inside empty groups</li>
+    <li>Fixed extra commands being included for macros in some situations</li>
+    <li>Fixed syntax definition negative symbol tests</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4146</h2>
+<div class="release-date">15 Dec 2022</div>
+<ul>
+    <li>Fixed a crash when a lazy loaded syntax doesn't exist</li>
+    <li>Windows: Fixed a packaging error with the installers</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4145</h2>
+<div class="release-date">14 Dec 2022</div>
+<ul>
+    <li>Added <tt>"fold_style"</tt> setting, making it easy to disable syntax-based code folding</li>
+    <li>Fixed search results not being ordered for Find in Files</li>
+    <li>Find in Files now supports tab multi-select modifier keys</li>
+    <li>Added <tt>"find_in_files_side_by_side"</tt> setting</li>
+    <li>Added <tt>"regex_auto_escape"</tt> setting</li>
+    <li>Fixed case where open file/folder dialogs didn't respect <tt>"default_dir"</tt> setting</li>
+    <li>Fixed files in side-bar not properly reflecting their git status</li>
+    <li>Fixed syntax highlighting performance issue due to backtracking</li>
+    <li>Fixed a performance regression in 4142 on color schemes with very complex selectors</li>
+    <li>Folded regions no longer include the trailing newline by default</li>
+    <li>Fixed selection jumping when clicking on a fold marker</li>
+    <li>API: Updated to Python 3.8.12 and OpenSSL 1.1.1s</li>
+    <li>API: The Python 3.3 plugin environment now uses the same OpenSSL as 3.8</li>
+    <li>API: Added <tt>sublime.project_history()</tt> function</li>
+    <li>API: Added <tt>sublime.folder_history()</tt> function</li>
+    <li>Windows: Fixed lockup that could occur when menus and popups interfere</li>
+    <li>Mac: Fixed extra window being created when ST is launched by opening a file from finder</li>
+    <li>Mac: Added security entitlements allowing plugins &amp; build systems to request the camera and microphone</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4141</h2>
+<div class="release-date">7 Nov 2022</div>
+<ul>
+    <li>Fixed scroll jumping when folded regions are at the start of lines</li>
+    <li>Fixed Replace regression in 4139</li>
+    <li>Windows: Fixed menu items sometimes having the wrong size</li>
+    <li>Mac: Fixed Window/New Tab not working with the Adaptive theme</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4140</h2>
+<div class="release-date">1 Nov 2022</div>
+<ul>
+    <li>Various syntax highlighting improvements</li>
+    <li>Mac: Fixed cursor getting stuck as a resize handle on Ventura</li>
+    <li>Linux: Fixed a <tt>"ui_scale"</tt> regression in 4139</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4139</h2>
+<div class="release-date">27 Oct 2022</div>
+<ul>
+    <li>Fixed folder drag &amp; drop not working in the side bar</li>
+    <li>Fixed fold tag not rendering in some rare cases</li>
+    <li>Fixed case where text in command palette was incorrectly colored</li>
+    <li>Fixed scroll jumping when folding by level</li>
+    <li>Removed trailing comma in status bar when <tt>"show_line_column"</tt> is disabled</li>
+    <li>Fixed side bar button theming issue in the Default theme</li>
+    <li>Linux: Fixed external pastes being confused for internal ones</li>
+    <li>Mac: Recent files are now available without having a window open</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4138</h2>
+<div class="release-date">17 Oct 2022</div>
+<ul>
+    <li>Added <tt>buffer</tt> variable to the console</li>
+    <li>Added <tt>"show_spelling_errors"</tt> and <tt>"show_line_column"</tt> settings</li>
+    <li>Sort Lines no longer includes the newline at EOF when nothing is selected</li>
+    <li>Fixed fold-by-level not always folding the correct regions</li>
+    <li>Fixed scope-based folding not always overriding indentation-based folding</li>
+    <li>Fixed sometimes not being able to type a space after completing a snippet</li>
+    <li>Fixed date format in about window</li>
+    <li>Linux: Fixed not being able to grab the scrollbar in a maximized window when at the right edge of the screen</li>
+    <li>Mac, Linux: Fixed crash that could occur at startup</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4137</h2>
+<div class="release-date">23 Sep 2022</div>
+<ul>
+    <li>Linux: Fixed a copy + paste regression</li>
+    <li>Linux and Mac: Fixed zombie processes while indexing</li>
+    <li>Windows: Fixed installer not including <tt>sublime_plugin.py</tt></li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4136</h2>
+<div class="release-date">15 Sep 2022</div>
+<ul>
+    <li>Improved rendering performance with large folded regions</li>
+    <li>Improved performance while open folders are scanned for the side-bar</li>
+    <li>Improved regex performance for syntax highlighting</li>
+    <li>Added <tt>"minimap_horizontal_scrolling"</tt> setting</li>
+    <li>Added <tt>"hot_exit_projects"</tt> setting to control what data gets saved in workspace files</li>
+    <li>Find-in-files now supports project-relative patterns starting with <tt>//</tt></li>
+    <li>Fixed code folding performance regression</li>
+    <li>Fixed <i>Reveal in Side Bar</i> not working in some cases</li>
+    <li>Fixed crash when quick switching projects</li>
+    <li>Fixed sheets not being added to the current selection in some cases</li>
+    <li>API: Added <tt>Window.promote_sheet</tt></li>
+    <li>Linux: Added safeguard around nested GTK main loops possibly causing data loss</li>
+    <li>Linux: Fixed case where dragging a tab to a window wasn't working</li>
+    <li>Mac: Fixed license being removed due to MAC address changing</li>
+    <li>Mac: Fixed case when opening an already open file would jump to the start</li>
+    <li>Mac: Fixed scrolling when command modifier key is pressed</li>
+    <li>Windows: <i>Open Containing Folder</i> and similar now respect file explorer replacements</li>
+    <li>Windows: Fixed GDI font glow glyph positioning</li>
+    <li>Windows: Adjusted for the new Windows 11 window border</li>
+</ul>
+</article>
+
+<article><h2>Build 4134</h2>
+<div class="release-date">27 May 2022</div>
+<ul>
+    <li>Various syntax highlighting improvements</li>
+    <li>Built-in syntax definitions now have specialized scope-based folding rules instead of using generic ones</li>
+    <li>Scope-based folding regions starting with a newline token now include the newline itself</li>
+    <li>Added option for scope-based folding to exclude trailing newlines in fold regions</li>
+    <li>Fixed regression in fold-by-level behavior</li>
+    <li>A <tt>noop</tt> command can now be used for keybindings to block default behavior</li>
+    <li>Added the <tt>find_in_files_max_file_size</tt> setting</li>
+    <li>Added the <tt>ruler_style</tt> setting</li>
+    <li>Fixed single-line comment toggling regression when syntax has no line comments</li>
+    <li>Fixed HTML sheet styling regression</li>
+    <li>Fixed rendering performance issue in files with large diffs</li>
+    <li>API: Fixed crash when running <tt>hide_panel</tt> command from <tt>EventListener.on_deactivated</tt></li>
+    <li>API: Fixed <tt>view.expand_to_scope</tt> stopping at phantoms</li>
+    <li>Mac: Fixed various issues with the quick switch project dialog</li>
+    <li>Mac: Fixed issue where dialogs could be triggered during dialogs</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4131</h2>
+<div class="release-date">25 March 2022</div>
+<ul>
+    <li>Generic fold scopes have now been configured</li>
+    <li>Fixed successive fold calls not working in some cases</li>
+    <li>Fixed gitignore toggle for find-in-files not being respected</li>
+    <li>API: <tt>View.expand_to_scope</tt> now returns <tt>None</tt> when the text point doesn't match the selector</li>
+    <li>API: Fixed regression in <tt>Selection.subtract</tt></li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4130</h2>
+<div class="release-date">23 March 2022</div>
+<ul>
+    <li>Added syntax-based code folding</li>
+    <li>Find patterns taken from an open file are now escaped for regex searches</li>
+    <li>Find-in-files now works in parallel</li>
+    <li>Reworked comment toggling to better handle embedded languages</li>
+    <li>Fixed various comment toggling edge cases</li>
+    <li>Added setting <tt>"goto_anything_exclude_gitignore"</tt></li>
+    <li>Various syntax definition updates</li>
+    <li>Newly rewritten Haskell syntax highlighting thanks to <a href="https://github.com/deathaxe">deathaxe</a></li>
+    <li>Sub-word separators are now configurable using the <tt>"sub_word_separators"</tt> setting</li>
+    <li>Fixed centered views jumping in some cases when whole content is replaced</li>
+    <li>Added missing theming attributes to update dialog</li>
+    <li>Fixed wrong default extension being used in open file dialog</li>
+    <li>Fixed additional window getting created at startup with hot exit disabled</li>
+    <li>Syntax Highlighting: Context backtraces now show files names for tmLanguage-based syntaxes</li>
+    <li>Syntax Highlighting: Fixed various syntax highlighting bugs related to backtracking</li>
+    <li>API: The <tt>toggle_comment</tt> command can now take a <tt>variant</tt> argument for languages with multiple comment variants</li>
+    <li>API: Added <tt>View.expand_to_scope</tt></li>
+    <li>Mac: Added work around for broken modal loops</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4129</h2>
+<div class="release-date">24 February 2022</div>
+<ul>
+    <li>Fixed a selection rendering regression in 4128</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4128</h2>
+<div class="release-date">22 February 2022</div>
+<ul>
+    <li>Added commands for converting between common identifier cases (See <i>Edit > Convert Case</i>)</li>
+    <li>Added support for Nordic (Windows 865) encoding</li>
+    <li>Fixed various issues with faded labels in the sidebar</li>
+    <li>Fixed scroll bar sometimes showing when text is wrapped</li>
+    <li>Reopening a file now asks for confirmation when there are unsaved changes</li>
+    <li>Fixed source mapping for inheritance in syntax backtraces</li>
+    <li>Mac: Fixed open file dialog crash with some syntaxes</li>
+    <li>Mac: Fixed case where settings window couldn't be closed</li>
+    <li>Linux: Fixed crash on startup for some desktop environments</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4127</h2>
+<div class="release-date">11 February 2022</div>
+<ul>
+    <li>The recent file list is now global instead of per window</li>
+    <li>Files opened in Sublime Text are now added to the system recent file list (see the <tt>"update_system_recent_files"</tt> setting)</li>
+    <li>Improved filesystem symlink detection</li>
+    <li>Fixed changes to very large unsaved files being lost on hot exit; a prompt is now shown to save them</li>
+    <li>Drag operations are no longer interrupted when reloading a file</li>
+    <li>Fixed regression in <tt>expand_selection_to_paragraph</tt> command behavior</li>
+    <li>Fine tuned binary file detection for find-in-files</li>
+    <li>Fixed text annotation underlines not drawing when combined with other font styles</li>
+    <li>Fixed region rendering edge case</li>
+    <li>Fixed case where multiple reload prompts could show simultaneously</li>
+    <li>Added <tt>"open_tabs_after_current"</tt> setting for controlling where tabs are opened</li>
+    <li>Fixed shadow related OpenGL rendering bug</li>
+    <li>Fixed OpenGL rendering issue related to the wrong context being active</li>
+    <li>Fixed dragging rows in side-bar not scrolling</li>
+    <li>Syntax Highlighting: Context backtraces now link to their origin in sublime-syntax files</li>
+    <li>Syntax Highlighting: Fixed crash caused by starting a branch point at the end of a line</li>
+    <li>API: <tt>View.context_backtrace</tt> now returns a list of <tt>ContextStackFrame</tt> with source file and location data</li>
+    <li>API: <tt>"encoded_position": true</tt> may be passed to <tt>open_file</tt> command for the same behavior as <tt>sublime.ENCODED_POSITION</tt></li>
+    <li>Linux: Follow system scroll bar overlay setting</li>
+    <li>Linux: Fix various issues caused by the C locale</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4125</h2>
+<div class="release-date">17 December 2021</div>
+<ul>
+    <li>Improved OpenGL rendering performance by automatically batching together controls</li>
+    <li>Fixed crash when loading invalid grid layout from session</li>
+    <li>Fixed spell checker incorrectly marking some words as correct if they can't be encoded</li>
+    <li>Fixed various edge cases related to phantoms</li>
+    <li>Fixed rendering order of successive popups</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4124</h2>
+<div class="release-date">9 December 2021</div>
+<ul>
+    <li>Added GB18030 and CP862 to status bar encoding menu</li>
+    <li>Made <tt>"find_in_files_max_result_size"</tt> not apply when replacing</li>
+    <li>Fixed text phantom rendering regression</li>
+    <li>Fixed phantom-related crash</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4123</h2>
+<div class="release-date">6 December 2021</div>
+<ul>
+    <li>Added support for Chinese standard GB18030 encoding</li>
+    <li>Binary files now show as "Binary" syntax instead of "Plain Text" in the status bar</li>
+    <li>Resolved various issues tracking symlinks in the side-bar</li>
+    <li>Avoid session data corruption if a crash happens while saving the session</li>
+    <li>Syntax Highlighting: Fixed backtracking breaking when creating phantoms or doing a context backtrace</li>
+    <li>Syntax Highlighting: Fixed regression with some syntax definitions introduced in 4115</li>
+    <li>Fixes package subfolders sometimes not being loaded when matching the <tt>"ignored_packages"</tt> setting</li>
+    <li>Fixed wildcards incorrectly matching subpaths (For settings like <tt>"folder_exclude_patterns"</tt>)</li>
+    <li>Fixed layout instability in side bar causing things to occasionally be rendered 1 pixel off</li>
+    <li>Added some missing glyphs to <tt>"draw_unicode_white_space": "all"</tt></li>
+    <li>Linux: Added missing <tt>libcurl</tt> dependency for package managers</li>
+    <li>Linux: Fixed GTK overriding <tt>LC_NUMERIC</tt> breaking serialization</li>
+    <li>Mac: Aliases are now resolved when using drag and drop</li>
+    <li>Mac: Fixed window sometimes being restored on startup when <tt>"create_window_at_startup"</tt> is disabled</li>
+    <li>API: The <tt>show_panel</tt> command for the find and find in files panels can now take <tt>"pattern"</tt> and <tt>"replace_pattern"</tt> arguments</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4122</h2>
+<div class="release-date">3 November 2021</div>
+<ul>
+    <li>Added support for CP862 file encoding</li>
+    <li><tt>subl -n</tt> will reuse an existing empty window if the application isn't running</li>
+    <li>Added <tt>"draw_unicode_bidi"</tt> setting for drawing unicode bidi characters</li>
+    <li>Added <tt>"select_across_groups"</tt> setting for opting into the old side bar selection behavior when selecting a single file</li>
+    <li>Fixed <tt>"close_windows_when_empty"</tt> setting not working</li>
+    <li>Fixed goto-definition preview not closing on escape</li>
+    <li>Fixed quick panel closing on enter when there are no matching entries</li>
+    <li>API: <tt>ListInputHandler.preview</tt> is now called with <tt>None</tt> when no items match the current filter</li>
+    <li>API: Fixed case where <tt>Window.project_data()</tt> could return an invalid value</li>
+    <li>Windows: Fixed command line not taking focus after closing a waited on file</li>
+    <li>Windows: Fixed crash when OpenGL initialization fails</li>
+    <li>Mac: Fixed native tabs restoration resulting in odd behavior</li>
+    <li>Mac: Fixed <tt>subl -b</tt> not working</li>
+    <li>Mac: Fixed terminal not being focused after waiting on file</li>
+    <li>Mac: Fixed <i>Window > Merge All Windows</i> merging minimized windows</li>
+    <li>Mac: Fixed various inconsistencies when opening files from finder</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4120</h2>
+<div class="release-date">25 October 2021</div>
+<ul>
+    <li>Fixed crash related to syntax backtracking and phantoms</li>
+    <li>Fixed text drag and drop regression</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4119</h2>
+<div class="release-date">22 October 2021</div>
+<ul>
+    <li>Fixed wrong line numbers in some cases when code folding is being used</li>
+    <li>Mac: Fixed open files not being restored when <tt>hot_exit</tt> is disables</li>
+    <li>Mac: Tweak text drag-drop behavior to respect NSDragAndDropTextDelay</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4118</h2>
+<div class="release-date">15 October 2021</div>
+<ul>
+    <li>Fixed sequential key binding regression in 4117</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4117</h2>
+<div class="release-date">13 October 2021</div>
+<ul>
+    <li>Use goto-symbol to jump to specific files in find results</li>
+    <li>Improve color scheme/theme selection UI</li>
+    <li>File-specific indentation settings are now persisted across restarts</li>
+    <li>Fix extra blank window being opened at startup in some cases</li>
+    <li>Fix not properly exiting after a prompt when hot_exit is disabled</li>
+    <li>Add <i>Selection > Expand Selection to Block</i> which has the same behavior as <i>Expand Selection to Paragraph</i> had previously</li>
+    <li>Fix goto-anything and quick-panels closing when window loses focus</li>
+    <li>Fix focus lost when selected group is closed whilst reducing the number of groups</li>
+    <li>Various improvements to behavior of moving sheets during window layout changes</li>
+    <li>Fix some edge cases related to <tt>"find_in_files_max_result_size"</tt></li>
+    <li>Fix regression where line numbers were not being calculated properly when folding</li>
+    <li>API: Fix <tt>View.show</tt> and <tt>View.show_at_center</tt> not working from on_load callback in some cases</li>
+    <li>Mac: Fix incorrectly reporting successful key event when no command was found</li>
+    <li>Windows: Fix stdout/stderr output data race when building</li>
+    <li>Windows: Fix hang on modal dialogs when context menu is open</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4116</h2>
+<div class="release-date">29 September 2021</div>
+<ul>
+    <li>Fix download button in update dialog being clickable when disabled</li>
+    <li>Hide Sublime Merge menu items when <tt>"sublime_merge_path"</tt> is set to <tt>null</tt></li>
+    <li>Mac: Fix windows not restoring properly with multi-monitor setups</li>
+    <li>Mac: Fix window layout issue with native tabs when exiting full screen</li>
+    <li>Linux: Fix race condition with multiple simultaneous command line invocations</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4115</h2>
+<div class="release-date">24 September 2021</div>
+<ul>
+    <li>Fix line highlighting applying to all widgets</li>
+    <li>Fix caret position regression when drag-selecting text</li>
+    <li>Fix syntax highlighting backtracking-related performance problem</li>
+    <li>Improve mini-diff rendering performance under OpenGL</li>
+    <li>Improve performance when reading large files from stdin</li>
+    <li>Undo stack is now cleared when reading from stdin</li>
+    <li>Fix performance regression under Windows with non-integer DPI scaling</li>
+    <li>Fix current transient sheet unexpectedly closing when using goto-anything</li>
+    <li>Fix completions in input panel not utilizing available window space</li>
+    <li>Fix expand selection to tag not working in XML</li>
+    <li>Fix being unable to open more than one new empty window</li>
+    <li>Mac: The setting <tt>"use_find_clipboard"</tt> can be used to disable global find clipboard integration</li>
+    <li>Mac: Fix double click not working at the top of a window when in full screen with a custom title bar</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4114</h2>
+<div class="release-date">3 September 2021</div>
+<ul>
+    <li>New update dialog that shows versions, license status and links to the changelog</li>
+    <li>Various syntax highlighting improvements</li>
+    <li>Right-delete now respects <tt>use_tab_stops</tt> setting</li>
+    <li>Improved hardware acceleration performance when rendering white space</li>
+    <li>Added <tt>find_scroll_highlights_limit</tt>, <tt>find_highlight_matches_max_size</tt> and <tt>find_regex_highlight_matches_max_size</tt> settings to allow configuring find limits</li>
+    <li>Added newline detection and normalization when changing settings programmatically</li>
+    <li>Layout is not longer remembered when "hot_exit" is disabled. You can change this using the <tt>remember_layout</tt> setting</li>
+    <li>Fixed tab selection stack not being updated as expected in some cases</li>
+    <li>Fixed transient sheets persisting when exiting goto-anything</li>
+    <li>Fixed <tt>save_on_focus_lost</tt> not working as expected with the reload dialog</li>
+    <li>Fixed snippet completions not respecting word boundaries</li>
+    <li>Fixed open files not being added to recent file list when hot exit is disabled</li>
+    <li>Fixed wrong path sometimes being used when viewing file history in Sublime Merge</li>
+    <li>Fixed window unexpectedly closing when project has no added folders and <tt>close_windows_when_empty</tt> is true</li>
+    <li><tt>open_files_in_new_window</tt> is now respected when reading from stdin</li>
+    <li>Fixed regex replace not working on last occurrence when using look-behind</li>
+    <li>Fixed plugin popups sometimes having the wrong placement</li>
+    <li>Fixed plugins not loading when a <tt>.python-version</tt> file is in the User package</li>
+    <li>Fixed squiggle underline width not scaling properly</li>
+    <li>Fixed line highlighting not working when gutter is disabled</li>
+    <li>Fixed case where folders were being added to existing windows instead of opening in a new window</li>
+    <li>Linux: Make selection after middle-click paste consistent with other applications</li>
+    <li>Linux: Fixed custom title bar label color for some GTK themes</li>
+    <li>Windows: Fixed a case where session could be lost when upgrading</li>
+    <li>Windows: Fixed alternate data streams being deleted on save</li>
+    <li>Windows: Fixed slow window creation when using OpenGL</li>
+    <li>Windows: Fixed incorrect case being used when opening files from find-in-files with gitignore enabled</li>
+    <li>Mac: Fixed title bar text not fading when out of focus</li>
+    <li>Mac: Fixed reading stdin not working when no windows are open</li>
+    <li>API: Added <tt>Buffer.clear_undo_stack()</tt></li>
+    <li>API: Fixed <tt>View.show</tt> and <tt>View.show_at_center</tt> not working from on_load callback</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4112</h2>
+<div class="release-date">13 July 2021</div>
+<ul>
+    <li>Windows: Fixed a rendering quality regression in 4111</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4111</h2>
+<div class="release-date">12 July 2021</div>
+<ul>
+    <li>Fixed an infinite loop that could occur during syntax highlighting</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4110</h2>
+<div class="release-date">5 July 2021</div>
+<ul>
+    <li>Further OpenGL rendering performance improvements</li>
+    <li>Added <tt>syntax_detection_size_limit</tt> setting for controlling when syntax detection is skipped</li>
+    <li>Preserve Case now works with unicode characters</li>
+    <li>Middle clicking in the Open Files section of then sidebar will close the clicked on file</li>
+    <li>Fixed scenario where folders weren't being watched for changes</li>
+    <li>Fixed underlines being drawn behind line highlight</li>
+    <li>Mac: Fixed glyph rendering regression</li>
+    <li>Linux: Fixed letters sometimes being cut off</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4109</h2>
+<div class="release-date">22 June 2021</div>
+<ul>
+    <li>Various syntax highlighting improvements</li>
+    <li>Syntax and indentation detection is now done when editing stdin</li>
+    <li>Fixed Ruby syntax highlighting in the Monokai color scheme</li>
+    <li>Fix Sublime Text opening stdin on Windows and Linux when not desired</li>
+    <li>Windows: Fixed always opening files in new windows</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4108</h2>
+<div class="release-date">21 June 2021</div>
+<ul>
+    <li>Improved performance when editing large files</li>
+    <li>Improved OpenGL rendering performance</li>
+    <li>Improved handling of deleted files</li>
+    <li><tt>subl</tt> can now be used to edit stdin, eg: <tt>echo test | subl | cat</tt></li>
+    <li>Theme: Improved scroll puck visibility</li>
+    <li>Theme: Fixed adaptive theme not respecting themed_title_bar setting with light color schemes</li>
+    <li>Added <tt>reveal_menu</tt> setting for disabling revealing the menu when alt is pressed on Linux and Windows</li>
+    <li>Fixed the append command's <tt>scroll_to_end</tt> parameter sometimes not working</li>
+    <li>Safe Mode key binding can be disabled by creating a file named <tt>.Disable Safe Mode Shortcut</tt> in the data directory</li>
+    <li>Fixed <i>Goto Symbol</i> sometimes being scrolled incorrectly</li>
+    <li>Fixed multi-select file limit applying to sidebar</li>
+    <li>Fixed auto-complete related hang in some large files</li>
+    <li>Linux: Fixed print sometimes not working</li>
+    <li>Linux: Fixed wrong order of yes/no buttons in GTK dialogs</li>
+    <li>Windows: Always make a new window when launching main executable on Windows</li>
+    <li>Windows: Fixed window icon not scaling properly on Windows</li>
+    <li>Windows: Fixed globs not being expanded in some cases on Windows</li>
+    <li>Mac: Fixed auto theme not changing with OS auto theme on macOS</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4106</h2>
+<div class="release-date">19 May 2021</div>
+<ul>
+    <li>Preparation for public release</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4105</h2>
+<div class="release-date">10 May 2021</div>
+<ul>
+    <li>Linux, Mac: Caches have been moved to their proper location (<tt>~/.cache</tt> and <tt>~/Library/Caches</tt> respectively)</li>
+    <li>Windows: Fixed an auto complete crash when <tt>auto_hide_menu</tt> is enabled</li>
+    <li>Windows: Fix memory leak</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4104</h2>
+<div class="release-date">3 May 2021</div>
+<ul>
+    <li>Fix crash with <tt>chain</tt> command</li>
+    <li>Fix regressions with Goto Anything in 4103</li>
+    <li>Windows: Fixed an OpenGL regression in 4103</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4103</h2>
+<div class="release-date">30 April 2021</div>
+<ul>
+    <li>Further performance improvements for Goto Anything</li>
+    <li>Added <tt>Scroll Bar.sublime-mousemap</tt> to customize scrollbar interaction</li>
+    <li>Added the <tt>chain</tt> command, which accepts a list of commands to run in its "commands" argument. This allows binding a key to run multiple commands without having to use a macro</li>
+    <li>Various syntax definition updates</li>
+    <li>Add "Report a Bug" entry in the Help menu</li>
+    <li>"open_files_in_new_window" is now supported on all platforms</li>
+    <li>Fixed scroll jumping on swap up/down</li>
+    <li>Auto Complete: Fixed an infinite loop when the same folder is added to the sidebar twice</li>
+    <li>Linux: Use native dialogs functionality in GTK, enabling KDE dialogs when desired</li>
+    <li>Mac: Improved behavior of Open and Save dialogs</li>
+    <li>Windows: Fix scroll jumping when using "auto_hide_menu" with adaptive theme</li>
+    <li>Windows: Fix multiple application instances launching using "Open with Sublime Text"</li>
+    <li>API: Add missing sublime.selected_sheets() method for Python 3.3</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4102</h2>
+<div class="release-date">9 April 2021</div>
+<ul>
+    <li>Mac: Fixed window title appearing in the wrong location in the Adaptive theme</li>
+    <li>Fixed a sidebar selection bug with the last file in a folder</li>
+    <li>Folders in the sidebar can be recursively expanded via alt+arrow key</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4101</h2>
+<div class="release-date">6 April 2021</div>
+<ul>
+    <li>Windows: Fixed missing manifest</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4100</h2>
+<div class="release-date">5 April 2021</div>
+<ul>
+    <li>Mac releases now include native Apple Silicon binaries</li>
+    <li>Switching files correctly updates the window title and status bar</li>
+    <li>Tab Multi-Select: in <em>Goto File</em> and <em>Goto Symbol in Project</em>, the <tt>ctrl</tt>/<tt>cmd</tt> modifier now opens the file to the right, replacing any existing tabs</li>
+    <li>Tab Multi-Select: in <em>Goto File</em>, <em>Goto Symbol in Project</em> and <em>Definitions</em> popup, the <tt>shift</tt> modifier appends the file to the far right</li>
+    <li>Goto Anything: pasting a file name and line number no longer changes the line in the previous file</li>
+    <li>Goto Anything: add missing <tt>ctrl+enter</tt> key binding for Windows and Linux</li>
+    <li>Goto Anything: correct flickering of first tab when filtering files</li>
+    <li>Auto Complete: fixed a regression with the <em>Definition</em> link</li>
+    <li>Sidebar: fixed keyboard navigation when the Open Files section is displayed</li>
+    <li>Code Folding: fixed some edge-case incorrect behaviors</li>
+    <li>Linux: recursively expanding and collapsing sidebar folders now works with <tt>alt</tt> or <tt>super</tt></li>
+    <li>Various syntax definition updates</li>
+    <li>API: added <tt>Sheet.group()</tt></li>
+    <li>API: added <tt>sublime.CLEAR_TO_RIGHT</tt> for use with <tt>Window.open_file()</tt></li>
+    <li>API: fixed <tt>ViewEventListener.on_load_async()</tt> sometimes not being called</li>
+    <li>API: added missing <tt>Window.select_sheets()</tt> method to Python 3.3 plugin host</li>
+    <li>API: <tt>Syntax.name</tt> is now derived from the path if not present</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4099</h2>
+<div class="release-date">15 March 2021</div>
+<ul>
+    <li>Auto Complete: added the <tt>auto_complete_when_likely</tt> setting</li>
+    <li>Auto Complete: when <tt>mini_auto_complete</tt> is enabled, a normal AC window will no longer appear</li>
+    <li>Auto Complete: fixed clipping of kind letters</li>
+    <li>Sidebar: keyboard navigation has been fixed</li>
+    <li>Sidebar: various file selection fixes, including paths passed to commands</li>
+    <li><tt>switch_file</tt> now preserves the current tab multi-selection</li>
+    <li><tt>delete_file</tt> now properly closes associated tabs</li>
+    <li><tt>swap_line_down</tt> will no longer result in an invalid selection</li>
+    <li>Trimming modified white space works properly in more edge cases</li>
+    <li><tt>trim_trailing_white_space_on_save</tt> set to <tt>not_on_caret</tt> will no longer remove file contents</li>
+    <li>Selection will no longer be reset after <em>Find All</em> is used when finding in selection</li>
+    <li>Find results are now properly highlighted on <em>Find All</em> when <tt>close_find_after_find_all</tt> is turned off</li>
+    <li>Unicode URLs are now properly handled in the editor context menu</li>
+    <li>Closing window right after creating it will no longer crash</li>
+    <li>Changing window layout will no longer crash</li>
+    <li>Tab selection changes will no longer crash</li>
+    <li>Mac: windows will now stay maximized when using Mac window tabs</li>
+    <li>Linux: drag and drop of files into the editor has been fixed</li>
+    <li>Windows: menu corruption when using dark menus has been fixed</li>
+    <li>Themes: the <tt>tree_row</tt> for the file with input focus now gets the attribute <tt>highlighted</tt></li>
+    <li>Various syntax definition updates</li>
+    <li>Clicking the Definition popup side-by-side icon will now replace all the selected tabs on the right</li>
+    <li>Fixed reveal in side bar sometimes not scrolling far enough</li>
+    <li>API: Added logging status functions:
+        <ul>
+            <li><tt>sublime.get_log_commands()</tt></li>
+            <li><tt>sublime.get_log_input()</tt></li>
+            <li><tt>sublime.get_log_build_systems()</tt></li>
+            <li><tt>sublime.get_log_result_regex()</tt></li>
+            <li><tt>sublime.get_log_indexing()</tt></li>
+            <li><tt>sublime.get_log_fps()</tt></li>
+            <li><tt>sublime.get_log_control_tree()</tt></li>
+        </ul>
+    </li>
+    <li>API: Make the logging function toggle when no argument is passed:
+        <ul>
+            <li><tt>sublime.log_commands()</tt></li>
+            <li><tt>sublime.log_input()</tt></li>
+            <li><tt>sublime.log_build_systems()</tt></li>
+            <li><tt>sublime.log_result_regex()</tt></li>
+            <li><tt>sublime.log_indexing()</tt></li>
+            <li><tt>sublime.log_fps()</tt></li>
+            <li><tt>sublime.log_control_tree()</tt></li>
+        </ul>
+    </li>
+    <li>API: <tt>ok_cancel_dialog()</tt> and <tt>yes_no_cancel_dialog</tt> now accept an optional <tt>title</tt> parameter</li>
+    <li>API: popups will be properly positioned when displayed near the right-hand side of the editor</li>
+    <li>API: popups near the right-hand side of the editor with wrapped lines will now be properly sized</li>
+    <li>API: minihtml will now properly handle whitespace after <tt>br</tt> tags and at the beginning of <tt>li</tt> tags</li>
+    <li>API: minihtml now supports <tt>white-space: nowrap</tt></li>
+    <li>API: Updated Python to 3.8.8 and OpenSSL to 1.1.1j</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4098</h2>
+<div class="release-date">12 February 2021</div>
+<ul>
+    <li>Windows will remember their Virtual Desktop/Space/Workspace, controlled by the <tt>remember_workspace</tt> setting</li>
+    <li>Tab Multi-Select: added commands to change tab focus left and right</li>
+    <li>Tab Multi-Select: improved <em>Selection > Tab Selection</em> menu</li>
+    <li>Tab Multi-Select: the Alt modifier now works in the Side Bar</li>
+    <li>Tab Multi-Select: the Alt and Ctrl/Cmd modifiers now work with the tab dropdown</li>
+    <li>Find highlights are no longer shown for files over 1MB</li>
+    <li>Side bar row highlights now properly reflect the selected tabs</li>
+    <li>Fixed a regression that would leave open files after being deleted from the side bar</li>
+    <li><em>Reveal in Side Bar</em> now works consistently</li>
+    <li><em>Goto Symbol in Project</em> now properly behaves with the Ctrl/Cmd modifier</li>
+    <li>Fixed the <tt>tree_animation_enabled</tt> setting to work properly</li>
+    <li>Prevent a crash when opening a file while two or more tabs are selected</li>
+    <li>Fixed a bug with Goto Anything when combining a file name and line number</li>
+    <li>Themes: Fix a regression that could cause folder icons in the side bar to be rendered incorrectly</li>
+    <li>Linux: Resolved menu performance issues when using Wayland</li>
+    <li>Linux: Fixed a crash on some non-Gnome desktop environments</li>
+    <li>Linux: Prevent carets from getting stuck due to text drags</li>
+    <li>API: Added <tt>modifier_keys</tt> to event dicts when commands are invoked via a menu</li>
+    <li>API: Tooltips from minihtml <tt>title</tt> attributes are now positioned properly</li>
+    <li>API: Additional fix for <tt>CommandInputHandler()</tt> objects for Python 3.3</li>
+    <li>API: Updated Python to 3.8.7 and OpenSSL to 1.1.1i</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4097</h2>
+<div class="release-date">3 February 2021</div>
+<ul>
+    <li>Key Bindings: <i>Join Lines</i> is now on Ctrl+Shift+J / Cmd+Shift+J</li>
+    <li>Key Bindings: <i>Expand Selection to Indentation</i> is no longer bound by default</li>
+    <li>Key Bindings: Ctrl+J / Cmd+J is now used as a prefix for sequential key bindings, similar to Ctrl+K / Cmd+K</li>
+    <li>Improved symbol popup navigation to default to replacing the focused sheet</li>
+    <li>Append Tab icon in symbol popup now always opens a new tab to the right</li>
+    <li>Added <i>Selection/Tab Selection</i> menu</li>
+    <li>Find: Find in Selection now highlights the area that will be searched</li>
+    <li>Find: Added "find_only" and "replace_only" options to "auto_find_in_selection"</li>
+    <li>Find: Fixed adjacent matches being skipped when find in selection is in use</li>
+    <li>Find: Fixed find in selection option not being cleared when changing tabs</li>
+    <li>Find: Find commands can now be run without the find panel having input focus</li>
+    <li>Linux: Disable custom title-bar on non-gnome desktop environments</li>
+    <li>Linux: Fix popups having a titlebar or not showing</li>
+    <li>API: Fix CommandInputHandler objects for Python 3.3</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4096</h2>
+<div class="release-date">29 January 2021</div>
+<ul>
+    <li>Linux: Added support for custom title bars</li>
+    <li>Goto File, Goto Symbol in Project, Goto Definition and the Definitions popup now support the ctrl/cmd modifier to open the file in addition to the current file</li>
+    <li>Tabs, Open Files entries, Goto File, Goto Symbol in Project, Goto Definition and the Definitions popup now support using the alt modifier to replace the current file with the selected file</li>
+    <li>Added support for previewing TGA and PSD images</li>
+    <li>Command Palette entry <i>UI: Customize Color Scheme</i> now supports in .tmTheme files</li>
+    <li>Find in Files: Fix not recursing into directories on networked file systems</li>
+    <li>Find in Files: Hide rulers by default in find results</li>
+    <li>Themes: Improved appearance of highlight_modified_tabs with square and rounded tabs</li>
+    <li>Themes: Fix background color of Adaptive theme tabset when a sheet has a color scheme override</li>
+    <li>Themes: tabset_control and tab_control now get a tint of the sheet after background_modifier is applied</li>
+    <li>Windows: Fix display of color emoji when using subpixel antialiasing</li>
+    <li>Windows: Work around OpenGL artifacts in text controls</li>
+    <li>Windows: Fix flashing when using OpenGL and resizing a window</li>
+    <li>Fixed an regression in Auto Complete window positioning</li>
+    <li>API: Backwards Compatibility Break: sublime.ADD_TO_SELECTION_SEMI_TRANSIENT was removed, should use sublime.ADD_TO_SELECTION | sublime.SEMI_TRANSIENT in place</li>
+    <li>API: Added the flag sublime.SEMI_TRANSIENT for use with Window.open_file()</li>
+    <li>API: Added the flag sublime.REPLACE_MRU for use with Window.open_file(). When multiple sheets are selected, this flag will cause the opened file to replace the most recently used sheet with the file being opened.</li>
+    <li>API: Backwards Compatibility Break: The event parameter passed to commands when a minihtml link is clicked changed from a two-element list to a dict with the keys x and y</li>
+    <li>API: Added the flag sublime.WANT_EVENT for use with Window.show_quick_panel(). This will pass an event dict to the on_select callback. The dict will contain the key modifier_keys, which will be a dict that may contain zero or more of the keys: primary, ctrl, super, alt, altgr.</li>
+    <li>API: The TextInputHandler and ListInputHandler classes may define a method want_event() that returns True to receive an extra parameter, an event dict, when the validate() and confirm() methods are called. The dict will contain the key modifier_keys, which will be a dict that may contain zero or more of the keys: primary, ctrl, super, alt, altgr.</li>
+    <li>API: Add sublime.ui_info() for high-level information about the UI</li>
+    <li>API: Fix display of the annotation field of ListInputItem()</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4095</h2>
+<div class="release-date">22 January 2021</div>
+<ul>
+    <li>Changed file tab style, adding <tt>file_tab_style</tt> setting</li>
+    <li>Added Default Dark theme</li>
+    <li>Added automatic dark/light theme and color scheme switching, based on OS theme changes</li>
+    <li>Sheets without input focus are now dimmed when using included themes</li>
+    <li>Included themes have a tab connector joining the active sheet and tab when using sheet multi-select</li>
+    <li>Improved the theme and color scheme selection commands</li>
+    <li>Added commands to simplify customizing the active theme or color scheme</li>
+    <li>Added a New Tab button in the tab bar, and <tt>hide_new_tab_button</tt> setting</li>
+    <li>Various syntax highlighting improvements</li>
+    <li>Added Preserve Case to Find in Files</li>
+    <li>Definitions popups now include the symbol name</li>
+    <li>Improved handling of newlines in exported HTML</li>
+    <li>When renaming a file, the extension is now excluded from the initial selection</li>
+    <li><tt>switch_file</tt> command now handles filenames with compound extensions</li>
+    <li>The <tt>scroll_past_end</tt> setting now supports customizing the scroll distance using numbers from <tt>0.0</tt> to <tt>1.0</tt></li>
+    <li>Double-clicking a semi-transient sheet's tab will now fully open the sheet</li>
+    <li>Invalid Python version files are now correctly displayed in the Console</li>
+    <li>Fix a regression with side bar input focus</li>
+    <li>Resolve some bugs with syntax definitions that use branching</li>
+    <li>Fix a bug with Jump Back saving multiple jump points when drag-selecting text</li>
+    <li>Fixed a bug with Find where the most recent history item was sometimes overwritten</li>
+    <li>Fixed image sheets to properly follow the theme scroll bar colors</li>
+    <li>Fixed a bug with scroll position jumping around where certain commands were executed</li>
+    <li>Color Schemes: Slightly darkened the background of Mariana</li>
+    <li>Color Schemes: <tt>.hidden-tmTheme</tt> files are now supported by the <tt>.sublime-color-scheme</tt> convertor</li>
+    <li>Themes: Included themes use variables extensively, making customization simpler</li>
+    <li>Themes: The <tt>settings</tt> key now supports objects, with keys being settings and values being a boolean, string or array of strings</li>
+    <li>Themes: Added <tt>sheet_contents</tt> class to text, image and HTML sheets</li>
+    <li>Themes: Added the <tt>background_modifier</tt> property for <tt>sheet_contents</tt></li>
+    <li>Themes: Added a number of new attributes to <tt>tab_control</tt> for richer tab theming</li>
+    <li>Themes: The <tt>highlighted</tt> attribute is only applied to the most recently active sheet, rather that the most recently active sheet in each group</li>
+    <li>Themes: <tt>tab_control</tt> and <tt>sheet_contents</tt> classes now synchronize their <tt>highlighted</tt> and <tt>hover</tt> attributes</li>
+    <li>Themes: <tt>tooltip</tt> controls now support animations to their opacity</li>
+    <li>Linux: Fix bug with the caret not moving after performing a text drag</li>
+    <li>Linux: Fix key bindings containing the <tt>-</tt> key when using a French AZERTY keyboard</li>
+    <li>Linux: Fix a bug with context menus sometimes getting incorrect variables</li>
+    <li>Mac: Updated icon to follow macOS 11 style</li>
+    <li>Mac: Added a workaround for Apple M1 OpenGL graphics driver bug that caused text to be rendered incorrectly</li>
+    <li>Mac: Fix title bar flickering after switching between themes using light and dark menus</li>
+    <li>Mac: Fix a bug with <tt>"preview_on_click": "left_only"</tt> when the option key was used with the left mouse button</li>
+    <li>Mac/Windows: Added document icons and file associations for all Sublime file formats</li>
+    <li>Windows: Added support for dark mode title bars and menus</li>
+    <li>Windows: Correct some font rendering glitches</li>
+    <li>Windows: Fix bug causing menu to appear when using key binding using <tt>alt</tt></li>
+    <li>Windows: Fix a crash when starting after closing with a window fullscreen</li>
+    <li>Windows: Fix issue with properly sizing maximized windows when using custom title bars</li>
+    <li>Windows: Added a workaround for Intel OpenGL graphics driver bug that caused black bars at the top of some windows</li>
+    <li>API: Added <tt>ListInputItem</tt> so that <tt>ListInputHandler</tt> objects can provide kind info, annotations and details</li>
+    <li>API: Added color-based kind IDs for <tt>ListInputItem</tt> and <tt>QuickPanelItem</tt> to allow plugins to provide semantic colors</li>
+    <li>API: Improved <tt>sys.stdout</tt> to extend <tt>io.TextIOBase</tt></li>
+    <li>API: Fix a bug with popup being stuck open when a popup is shown in the hide event handler of another popup</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4094</h2>
+<div class="release-date">30 November 2020</div>
+<ul>
+    <li>Added additional menu items to the command palette</li>
+    <li>Auto save is now asynchronous</li>
+    <li>Added <tt>themed_title_bar</tt> setting</li>
+    <li>Added <tt>control_character_style</tt> setting</li>
+    <li><i>Copy as HTML</i> will now set the clipboard MIME type</li>
+    <li>Fixed block carets not aligning with pixel boundaries on screens with fractional DPI scales</li>
+    <li>Windows: Fixed regression that disabled sub-pixel anti-aliasing</li>
+    <li>Mac: Improved OpenGL performance on Intel GPUs</li>
+    <li>API: <tt>.sublime-commands</tt> files now support filtering commands via the "platform" key</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4093</h2>
+<div class="release-date">18 November 2020</div>
+<ul>
+    <li>Windows: Various fixes for custom title bars</li>
+    <li>Printing: Added support for hashed color schemes</li>
+    <li>Printing: Fixed non-ascii characters rendering incorrectly on Mac</li>
+    <li>Fixed warning about incorrect menu mnemonic</li>
+    <li>Mac: Fix <tt>subl</tt> not bringing the running application to the foreground</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4092</h2>
+<div class="release-date">16 November 2020</div>
+<ul>
+    <li>Various syntax highlighting improvements</li>
+    <li>Windows: Added support for custom title bars</li>
+    <li>Added <i>File/Print</i>, which prints via a browser</li>
+    <li>Added <i>Edit/Copy as HTML</i></li>
+    <li>Added <i>Project/Recent/Remove Deleted</i></li>
+    <li>Added <tt>wrap_width_style</tt> preference</li>
+    <li>Added <tt>close_find_after_find_all</tt> preference</li>
+    <li>Added <tt>close_find_after_replace_all</tt> preference</li>
+
+    <li>Improved performance with large session files</li>
+    <li>Fixed an issue with undo stack serialization in the session</li>
+    <li>Fixed dragging tabs to non-visible windows</li>
+
+    <li>Build Systems: Any currently running process will be killed immediately when a new build is started</li>
+
+    <li>Mac: Added workaround for the command line helper when app translocation is in effect</li>
+    <li>Mac: Added workaround for macOS file dialogs not supporting file extensions containing periods</li>
+
+    <li>API: Added <tt>View.export_to_html()</tt></li>
+    <li>API: <tt>sublime.select_folder_dialog()</tt> now supports multiselect on Windows</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4090</h2>
+<div class="release-date">21 October 2020</div>
+<ul>
+    <li>Fixed a selection rendering regression</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4089</h2>
+<div class="release-date">20 October 2020</div>
+<ul>
+    <li>Fixed a selection rendering regression in 4088</li>
+    <li>Fixed a Goto Anything regression in 4088</li>
+    <li>Indexing: <tt>index_workers</tt> is now applied exactly, rather than approximately, which improves behavior when re-indexing a large number of windows</li>
+    <li>Mac: <i>Quick Switch Project</i> now works without any windows open</li>
+    <li>Linux: Fixed a compatibility regression in 4088 when GTK is built without Wayland support</li>
+    <li>Windows: Fixed a case where the mouse cursor could remain unexpectedly hidden</li>
+    <li>Windows: Fixed a compatibility issue with non-ascii user names</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4088</h2>
+<div class="release-date">12 October 2020</div>
+<ul>
+    <li>Fixed a syntax highlighting backtracking crash</li>
+    <li>Fixed incorrect popup window sizes in some circumstances</li>
+    <li>Improved performance with a large number of selections</li>
+    <li>Added <tt>console_max_history_lines</tt></li>
+    <li>Tweaked jump history behavior</li>
+    <li>Tweaked block caret size</li>
+    <li><i>Quick Switch Project</i> will open the selected project in a new window if <tt>Ctrl</tt> (<tt>Cmd</tt> on Mac) is held down</li>
+    <li>Fixed regression where all but the first open file was being skipped in find in files</li>
+    <li>Mac: Added a workaround for an Nvidia OpenGL driver issue</li>
+    <li>API: Added <tt>Sheet.close()</tt></li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4087</h2>
+<div class="release-date">25 September 2020</div>
+<ul>
+    <li>Various syntax highlighting improvements</li>
+    <li>OpenGL rendering performance improvements</li>
+    <li>Syntax Definitions: Added symbol indexing tests</li>
+    <li>Syntax Definitions: Added more information to the <i>Show Scope Name</i> popup</li>
+    <li>Syntax Definitions: Renamed TypeScript to TSX, and added a new vanilla TypeScript syntax</li>
+    <li>Syntax Definitions: Fixed an infinite loop that could occur with branch points</li>
+    <li>API: Fixed <tt>on_pre_close()</tt> being called after the view had been removed from the window</li>
+    <li>API: Updated Python to 3.8.6</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4086</h2>
+<div class="release-date">14 September 2020</div>
+<ul>
+    <li>Tweaks to block caret rendering</li>
+    <li>Fixed glow font rendering regression in 4085</li>
+    <li>Fixed incorrect line highlight rendering</li>
+    <li>Fixed an issue restoring undo history</li>
+    <li>Syntax definitions can now use multiple inheritance, provided all parents have the same base syntax</li>
+    <li>Linux: Added support for extra keys on Sun Type 7 keyboards</li>
+    <li>Windows: Fixed a Korean IME compatibility issue</li>
+    <li>Mac: Fixed a rendering glitch when moving windows between low dpi and high dpi monitors</li>
+    <li>API: Fixed an issue when using <tt>sublime.COMPLETION_FLAG_KEEP_PREFIX</tt> in conjunction with <tt>sublime.DYNAMIC_COMPLETIONS</tt></li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4085</h2>
+<div class="release-date">4 September 2020</div>
+<ul>
+    <li>Definitions hover popup shows more information about symbols</li>
+    <li>Goto Symbol shows more information about symbols</li>
+    <li><tt>trim_trailing_white_space_on_save</tt> can now be set to <tt>"not_on_caret"</tt></li>
+    <li>Improved behavior of <tt>scroll_context_lines</tt> in conjunction with mouse selection</li>
+    <li>Fixed rendering of large ligature symbols</li>
+    <li>minihtml: Added support for <tt>display: inline-block</tt> and <tt>text-align</tt></li>
+    <li>minihtml: Added support for <tt>title</tt> attribute tool tips</li>
+    <li>API: Added <tt>sublime.SymbolRegion</tt> and <tt>sublime.SymbolLocation</tt> with corresponding methods on <tt>View</tt> and <tt>Window</tt></li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4084</h2>
+<div class="release-date">21 August 2020</div>
+<ul>
+    <li>Fixed a crash regression in 4083</li>
+    <li>Fixed new windows not having input focus set correctly</li>
+    <li>API: Added <tt>on_associate_buffer()</tt> callback</li>
+    <li>API: Python 3.3 plugins trying to import <tt>Default/history_list.py</tt> will no longer fail, however these plugins must still be moved to 3.8 to work as expected</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4083</h2>
+<div class="release-date">19 August 2020</div>
+<ul>
+    <li>Improved <i>Jump Back</i> and <i>Jump Forward</i> commands</li>
+    <li>Added advanced options to the <tt>draw_white_space</tt> setting</li>
+    <li>Auto Complete: no longer triggers at <tt>.</tt> or <tt>-></tt> when there is an identifier to the right</li>
+    <li>Auto Complete: <tt>auto_complete_trailing_symbols</tt> is now disabled by default</li>
+    <li>Auto Complete: <tt>cancelCompletion</tt> will no longer prevent manual invocation</li>
+    <li>Files with the same filename, but in different groups, will now show path info in tab to disambiguate</li>
+    <li>Resolved bugs when two views of the same buffer had different color schemes</li>
+    <li>Relative line numbers are now correct when using a block caret</li>
+    <li>Fix closing read-only files when <tt>save_on_focus_lost</tt> is <tt>true</tt></li>
+    <li>Popups now better constrain themselves to the available window space</li>
+    <li>Corrected OpenGL rendering to not accidentally reuse textures in certain circumstances</li>
+    <li>Various crash fixes</li>
+    <li>Various syntax highlighting improvements</li>
+    <li>Syntax Definitions: prevent a crash when "extends" was combined with a context containing no patterns</li>
+    <li>API: added <tt>sublime.QuickPanelItem()</tt> with support for kind info, annotations and basic minihtml</li>
+    <li>API: plugins may now add selections to the <i>Jump Back</i> history list via the <tt>add_jump_record</tt> command</li>
+    <li>API: plugins may suppress selections from the <i>Jump Back</i> history list via the <tt>jump_ignore_selection</tt> region</li>
+    <li>API: plugins may now disable the default HTML and CSS completions</li>
+    <li>API: Renamed <tt>TextChangeListener.remove()</tt> to <tt>TextChangeListener.detach()</tt></li>
+    <li>API: Fixed a crash with <tt>TextChangeListener</tt></li>
+    <li>API: Added <tt>Buffer.id()</tt> and <tt>Buffer.file_name()</tt></li>
+    <li>API: Added <tt>View.sheet()</tt> and <tt>View.sheet_id()</tt></li>
+    <li>API: Added <tt>Window.selected_sheets()</tt>, <tt>Window.selected_sheets_in_group()</tt> and <tt>Window.select_sheets()</tt></li>
+    <li>API: <tt>EventListener.on_selection_modified()</tt> is no longer fired on non-selection state changes</li>
+    <li>Linux: added handling for GTK touch events</li>
+    <li>Mac: editor context menu now shows the correct cursor</li>
+    <li>Mac: cursor is no longer set when Sublime Text is not the foreground window</li>
+    <li>Mac: macOS 10.14+ no longer uses custom IBeam cursor for dark editor panes</li>
+    <li>Windows: corrected display of new windows to prevent flashes</li>
+    <li>Windows: fixed hang when the compositor is disabled, removed setting to disable vsync</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4081</h2>
+<div class="release-date">7 August 2020</div>
+<ul>
+    <li>Changed default color scheme to <i>Mariana</i></li>
+    <li>Various syntax highlighting improvements</li>
+    <li>Improved popup window behavior</li>
+    <li>Improved performance when loading files with very long lines</li>
+    <li>Improved quick panel sizing logic</li>
+    <li>Improved behavior of <tt>find_under_expand</tt></li>
+    <li>Improved snippet behavior</li>
+    <li>Improved <tt>subl</tt> behavior when choosing which window to open a file in</li>
+    <li>Improved undo history serialization performance</li>
+    <li>Added <tt>highlight_find_results_in_scrollbar</tt> setting</li>
+    <li><tt>set_file_type</tt> command now accepts "scope:" prefixed syntax names</li>
+    <li>Fixed white flashes that could occur in some circumstances</li>
+    <li>API: Added <tt>sublime.TextChangeListener</tt>, replacing the now removed <tt>on_text_changed()</tt></li>
+    <li>API: <tt>show_quick_panel</tt> now accepts placeholder text, via the <tt>placeholder</tt> argument</li>
+    <li>API: Added <tt>sublime.syntax_from_path()</tt>, <tt>sublime.find_syntax_by_name()</tt>, <tt>sublime.find_syntax_by_scope()</tt>, and <tt>sublime.find_syntax_for_file()</tt></li>
+    <li>API: Removed <tt>sublime.find_syntax()</tt></li>
+    <li>API: Added <tt>View.clones()</tt></li>
+    <li>API: Added <tt>Sheet.is_semi_transient()</tt> and <tt>Sheet.is_transient</tt></li>
+    <li>API: <tt>CommandInputHandler</tt> now has an <tt>initial_selection()</tt> method</li>
+    <li>API: <tt>sublime.executable_path()</tt>, <tt>sublime.packages_path()</tt>, <tt>sublime.installed_packages_path()</tt> and <tt>sublime.cache_path()</tt> may now be called at import time</li>
+    <li>Windows: added setting to disable vsync</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4079</h2>
+<div class="release-date">17 July 2020</div>
+<ul>
+    <li>Fixed a crash regression in 4078</li>
+    <li>Mac: Fix Adaptive theme title bar color regression in 4078</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4078</h2>
+<div class="release-date">17 July 2020</div>
+<ul>
+    <li>Improved find history behavior</li>
+    <li>Linux and Mac: Adaptive theme will set the menu color to follow the color scheme</li>
+    <li>Fixed scrolling in popup windows when using fractional scaling</li>
+    <li>Fixed links in annotations not working</li>
+    <li>Fixed close button position when <tt>show_tab_close_buttons_on_left</tt> is used</li>
+    <li>Fix keypad enter not working in find panel</li>
+    <li>Windows: Improved menu toggling behavior</li>
+    <li>Windows: Fixed IME caret position when inserting code points outside of the BMP</li>
+    <li>API: Replaced Settings iteration with <tt>Settings.to_dict()</tt> (3.8 only)</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4077</h2>
+<div class="release-date">11 July 2020</div>
+<ul>
+    <li>Fixed a crash in 4075 that could occur when closing the preferences window</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4076</h2>
+<div class="release-date">10 July 2020</div>
+<ul>
+    <li>Fixed a crash regression in 4075 with missing embeds</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4075</h2>
+<div class="release-date">10 July 2020</div>
+<ul>
+    <li>Added out of the box support for TypeScript and JSX, with thanks to <a href="https://github.com/Thom1729">Thomas Smith</a></li>
+    <li>Undo information is preserved in the session</li>
+    <li>Renamed <i>File/New View into File</i> into <i>File/Split View</i></li>
+    <li>Goto Anything can multi-select files by selecting a file while holding down Ctrl (Command on Mac)</li>
+    <li>Find in Files: Added <i>Find/Cancel Find in Files</i> menu item</li>
+    <li>Find in Files: Improved performance with large numbers of matches</li>
+    <li>Added various performance improvements with large files and graceful find degradation</li>
+    <li>Popup windows now use virtual windows for improved performance</li>
+    <li>Added setting <tt>scroll_context_lines</tt></li>
+    <li>Added <tt>preview_on_click</tt> setting to support only previewing files on left click</li>
+    <li>Added <tt>selection_description_column_type</tt> setting to control how the column in the status bar is calculated</li>
+    <li>Added <tt>close_deleted_files</tt> setting to control behavior of session restoration when files have been deleted on disk</li>
+    <li>Added <tt>show_tab_close_buttons_on_left</tt> setting</li>
+    <li>Added <i>Central European (Mac)</i> encoding support</li>
+    <li>Macros now record Find commands</li>
+    <li>Added support for stippled_underline and squiggly_underline in color schemes</li>
+    <li>Fixed several OpenGL related rendering issues</li>
+    <li>Fixed white flashes in text views</li>
+    <li>Fixed over/underscroll not providing any context</li>
+    <li>Fixed annotations being oversized without overlay scrollbars</li>
+    <li>Fixed phantoms sometimes leaking</li>
+    <li>A cold exit will now update the recently opened files list</li>
+    <li>Improve file deletion when there is no trash folder</li>
+    <li>Session is now saved when application is notified of system shutdown</li>
+    <li>Syntax Definitions: "extends" keyword in .sublime-syntax</li>
+    <li>Syntax Definitions: "version: 2" in .sublime-syntax to fix edge cases while retaining backwards compatibility</li>
+    <li>Syntax Definitions: lazy loading of external "embed" actions</li>
+    <li>Syntax Definitions: reduced cache size on disk</li>
+    <li>Syntax Definitions: prevent infinite include loops via with_prototype</li>
+    <li>Syntax Definitions: improved matching performance and memory usage</li>
+    <li>Syntax Definitions: "hidden_extensions" in .sublime-syntax</li>
+    <li>Syntax Definitions: allow combining "pop" with "push"/"set"/"embed"/"branch"</li>
+    <li>Syntax Definitions: fixed a number of scope related bugs</li>
+    <li>Syntax Definitions: fixed some regex capture related bugs</li>
+    <li>Windows: Added drop shadows to popup windows. These can be disabled via the <tt>popup_shadows</tt> setting</li>
+    <li>Windows: Added support for color emoji</li>
+    <li>Windows: Various IME improvements</li>
+    <li>Windows: Safe Mode is now activated via shift+alt</li>
+    <li>Mac: Improved key translation fallback for non-pure-ascii keyboards</li>
+    <li>Mac: Fix single instance id not taking into account the current user</li>
+    <li>minihtml: Improved support for HTML entities</li>
+    <li>minihtml: Added support for self-closed tags</li>
+    <li>API: Updated Python to 3.8.3, and OpenSSL to 1.1.1g</li>
+    <li>API: <tt>TextChange</tt> objects now include the number of UTF16 and UTF8 code units</li>
+    <li>API: <tt>Window.open_file</tt> now accepts <tt>sublime.ADD_TO_SELECTION_SEMI_TRANSIENT</tt> in addition to <tt>sublime.ADD_TO_SELECTION</tt> as flags</li>
+    <li>API: <tt>View.show()</tt> now takes <tt>keep_to_left</tt> and <tt>animate</tt> parameters</li>
+    <li>API: Added <tt>sublime.open_dialog</tt>, <tt>sublime.save_dialog</tt> and <tt>sublime.select_folder_dialog</tt></li>
+    <li>API: <tt>Settings</tt> objects can now be iterated over (3.8 only)</li>
+    <li>API: <tt>View.text_point()</tt> and related functions now accept a <tt>clamp_column</tt> parameter</li>
+    <li>API: Ensure on_text_changed() is called before on_query_completions() when sublime.DYNAMIC_COMPLETIONS has been specified</li>
+    <li>API: <tt>Region.__hash__</tt> and <tt>Phantom.__hash__</tt> have been replaced with <tt>to_tuple</tt></li>
+    <li>API: <tt>repr</tt> now works as expected</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4074</h2>
+<div class="release-date">28 April 2020</div>
+<ul>
+    <li>Auto Complete: Ranking quality improvements</li>
+    <li>Auto Complete: Added <tt>auto_complete_use_history</tt> setting to control if previous choices are automatically selected</li>
+    <li>Added additional settings to control the status bar: <tt>show_sidebar_button</tt>, <tt>show_indentation</tt> and <tt>show_syntax</tt></li>
+    <li>Added relative line numbers, controlled by the <tt>relative_line_numbers</tt> setting</li>
+    <li>Color Schemes: Added support for the <tt>underline</tt> font style</li>
+    <li>Color Schemes: Added new property, <tt>inactive_selection_border</tt></li>
+    <li>Added setting <tt>hide_pointer_while_typing</tt></li>
+    <li>Console now uses Python syntax highlighting by default</li>
+    <li>Windows, Linux: Added Shift+F10 key binding to open the context menu</li>
+    <li>Fixed folder dragging in the sidebar</li>
+    <li>Further improvements in layout preservation when programmatically editing preferences</li>
+    <li>API: <tt>View.add_regions()</tt> calls that add an underline now have that underline applied to whitespace characters</li>
+    <li>API: Added <tt>sublime.INHIBIT_REORDER</tt></li>
+    <li>API: <tt>Window.new_html_sheet()</tt> now accepts the <tt>sublime.ADD_TO_SELECTION</tt> flag</li>
+    <li>API: <tt>Window.new_html_sheet()</tt> no longer accepts <tt>cmd</tt> and <tt>args</tt> parameters</li>
+    <li>API: Fixed a regression in <tt>View.split_by_newlines()</tt></li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4073</h2>
+<div class="release-date">8 April 2020</div>
+<ul>
+    <li>Reworked Auto Complete UI</li>
+    <li>Fixed a Find in Files crash regression in 4072</li>
+    <li>Improved layout preservation when programmatically editing preferences</li>
+    <li><tt>.sublime-completion</tt> files can now specify <tt>annotation</tt>, <tt>kind</tt> and <tt>details</tt></li>
+    <li>API: <tt>CompletionItem</tt> now accepts a <tt>details</tt> parameter, which can include basic HTML</li>
+    <li>API: minihtml now processes <tt>subl:</tt> links, running them as commands</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4072</h2>
+<div class="release-date">8 April 2020</div>
+<ul>
+    <li>Find in Files can now filter by <tt>.gitignore</tt></li>
+    <li>Fixed a path wildcard matching regression in 4070</li>
+    <li>Auto Complete: <tt>auto_complete_selector</tt> now applies to the position before the just-typed in character, matching <tt>auto_complete_triggers</tt></li>
+    <li>Linux: Added <tt>Ctrl+Space</tt> to trigger Auto Complete</li>
+    <li>Linux, Windows: Added <tt>Alt+Shift+Left Mouse Button</tt> as an alternative column selection binding</li>
+    <li>Fixed a file encoding regression</li>
+    <li>Fixed a syntax highlighting backtracking edge case</li>
+    <li>API: Fixed <tt>on_selection_modified()</tt> being called with the wrong view when using cloned views</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4070</h2>
+<div class="release-date">1 April 2020</div>
+<ul>
+    <li>Spell Checking: Updated dictionaries</li>
+    <li>Spell Checking: Added support for non-utf8 dictionaries</li>
+    <li>Spell Checking: System dictionaries are now available on Linux</li>
+    <li>Spell Checking: Dictionaries in <tt>~/Library/Spelling</tt> are now available on Mac</li>
+    <li>Fixed <tt>ignored_packages</tt> setting causing sub-directories to be ignored</li>
+    <li>Fixed inline diffs not rendering an expected when draw centered is enabled</li>
+    <li>Linux: Fixed a regression in key bindings for the space bar</li>
+    <li>Windows: Fixed IME crash</li>
+    <li>API: Fixed <tt>View.text_point_utf8()</tt> and <tt>View.text_point_utf16()</tt> not working as expected</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4069</h2>
+<div class="release-date">27 March 2020</div>
+<ul>
+    <li>Comments and layout are preserved when programmatically editing preferences</li>
+    <li>Holding down Shift on Windows, or Option on macOS, will start Sublime Text in Safe Mode</li>
+    <li>Auto Complete: Typing the full tab trigger of a snippet will move it to the top of the results</li>
+    <li>Auto Complete: Fixed some scenarios when auto complete would incorrectly trigger</li>
+    <li>Linux: Improved compatibility with some keyboard layouts</li>
+    <li>Mac: Improved compatibility with some keyboard layouts</li>
+    <li>Windows: Improved IME support</li>
+    <li>Syntax tests can now assert that reindent is working as expected</li>
+    <li>Fixed popups not scrolling</li>
+    <li>Fixed incorrect scrolling in Find Results after startup</li>
+    <li>Windows: Fixed some Safe Mode inconsistencies</li>
+    <li>minihtml: Fix HSL color blending</li>
+    <li>minihtml: Fix handling of CSS comments</li>
+    <li>API: Updated Python to 3.8.2</li>
+    <li>API: Added <tt>View.rowcol_utf8()</tt>, <tt>View.rowcol_utf16()</tt>, <tt>View.text_point_utf8()</tt> and <tt>View.text_point_utf16()</tt></li>
+    <li>API: <tt>sublime.HistoricPosition</tt> now supplies utf8 and utf16 offsets</li>
+    <li>API: More detailed output when using <tt>sublime.log_control_tree()</tt></li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4068</h2>
+<div class="release-date">28 February 2020</div>
+<ul>
+    <li>Fixed Auto Complete unexpectedly showing after the first edit on a newly opened file</li>
+    <li>Fixed a crash that could occur with syntax definition branch points</li>
+    <li>Fixed the Console not scrolling to the end at startup</li>
+    <li>Fixed syntax definitions not reloading</li>
+    <li>Windows: Fixed <tt>subl</tt> not making Sublime Text the foreground window</li>
+    <li>Windows: Fixed a crash that could occur on startup</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4067</h2>
+<div class="release-date">14 February 2020</div>
+<ul>
+    <li>Auto Hide: Text now never jumps around when hiding tabs, even for short files</li>
+    <li>Find in Files: Binary file patterns are applied when an explicit folder is given</li>
+    <li>Find in Files: Using  "Find in Folder…" from the sidebar context menu will apply project file filters</li>
+    <li><tt>folder_exclude_patterns</tt> and <tt>folder_include_patterns</tt> now support project-relative paths, by starting the path with <tt>//</tt></li>
+    <li>Improved performance when adding directories with extreme amounts of files to the side bar</li>
+    <li>Fixed a race condition when using Build, with Save All on Build enabled and async file saving</li>
+    <li>Improved menu auto hide behavior on Linux and Windows</li>
+    <li>Fixed a case where <i>Jump Back</i> didn't behave as expected</li>
+    <li>Linux: Removed dependency on glibc 2.18</li>
+    <li>Linux: Better support for copy+paste with other applications that don't support utf8 text</li>
+    <li>API: Added <tt>Window.bring_to_front()</tt></li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4065</h2>
+<div class="release-date">29 January 2020</div>
+<ul>
+    <li>API: Added HTML sheets, which can be created via <tt>window.new_html_sheet()</tt></li>
+    <li>Command Line: Fixed subl only working intermittently on Windows</li>
+    <li>Scrolling: Actually fixed newly opened files on Mac not scrolling to the expected position</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4064</h2>
+<div class="release-date">28 January 2020</div>
+<ul>
+    <li>Command Line: Fixed regressions in 4063</li>
+    <li>API: Added <tt>sublime.log_control_tree(bool)</tt>. When enabled, clicking with ctrl+alt will log the control tree under the mouse to the console</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4063</h2>
+<div class="release-date">27 January 2020</div>
+<ul>
+    <li>Command Line: <tt>subl -</tt> can now be used to read from stdin on all platforms</li>
+    <li>Fixed a regression in 4062 that could cause syntax definitions to not load correctly</li>
+    <li>Fixed <i>Wrap Selection With Tag</i> not working</li>
+    <li>Scrolling: Fixed newly opened files on Mac not scrolling to the expected position</li>
+    <li>Scrolling: Fixed scroll position not being restored at start for non-selected tabs</li>
+    <li>Scrolling: Fixed <tt>revert</tt> on non-selected tabs not keeping the scroll position</li>
+    <li>Auto Complete: AC won't be triggered when replacing selected text</li>
+    <li>Fixed <tt>revert_hunk</tt> not showing in the context menu within inline diffs</li>
+    <li>Linux: Fixed text drag and drop not working correctly with unicode text</li>
+    <li>Mac: Fixed tooltip rendering issue on external low DPI monitors</li>
+    <li>Mac: Fixed <i>Undo</i> always being enabled, even if there's nothing to undo</li>
+    <li>API: Added <tt>"glow"</tt> to <tt>view.style_for_scope()</tt></li>
+    <li>API: Fixed newly created views not having a valid viewport before being returned to the API</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4062</h2>
+<div class="release-date">14 January 2020</div>
+<ul>
+    <li>Improved syntax definition load time</li>
+    <li>Fixed a crash that could occur with syntax definition branch points</li>
+    <li>Auto Complete: Several small fixes</li>
+    <li>minihtml: Fixed incorrect layout when using a non-default <tt>ui_scale</tt></li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4061</h2>
+<div class="release-date">11 December 2019</div>
+<ul>
+    <li>Auto Complete: Fixed <tt>cancelCompletions</tt> being ignored</li>
+    <li>Auto Complete: Fixed inserting a newline character not hiding the AC dialog</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4060</h2>
+<div class="release-date">6 December 2019</div>
+<ul>
+    <li>Mac: Fixed <i>New Window</i> not working</li>
+    <li>Auto Complete: Fixed a regression causing auto complete to be case sensitive</li>
+    <li>OpenGL: Added support for repeated textures</li>
+    <li>Fixed a 4059 regression in <i>Jump Back</i></li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4059</h2>
+<div class="release-date">5 December 2019</div>
+<ul>
+    <li>Reworked <i>Jump Back</i> and <i>Jump Forward</i> commands</li>
+    <li>Auto Complete: Added Sublime Text 3 style selection history</li>
+    <li>Auto Complete: Fixed a scenario where auto complete could insert nothing after selecting a completion already present at the insert location</li>
+    <li>Fixed Join Lines not working as expected with multiple selections</li>
+    <li>Fixed transient files not being created at startup when Hot Exit is disabled</li>
+    <li>OpenGL: Fixed a rendering regression in 4058</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4058</h2>
+<div class="release-date">4 December 2019</div>
+<ul>
+    <li>Auto Complete: Rework how punctuation triggers are handled</li>
+    <li>Auto Complete: Pressing tab when there are no available completions will insert a tab</li>
+    <li>OpenGL: Improve minimap rendering quality</li>
+    <li>OpenGL: Improve performance with many spelling errors</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4057</h2>
+<div class="release-date">1 December 2019</div>
+<ul>
+    <li>Fixed incorrect minimap rendering when using OpenGL</li>
+    <li>Auto Complete: Completions are not as dependent on the syntax tokenisation rules</li>
+    <li>Auto Complete: Various changes to how completions with punctuation are handled</li>
+    <li>API: Added <tt>sublime.DYNAMIC_COMPLETIONS</tt>. <tt>on_query_completions()</tt> can return this flag to indicate that completion results should be re-queried as the user types</li>
+    <li>API: Added <tt>sublime.KEEP_ON_SELECTION_MODIFIED</tt>, which can be passed to <tt>View.show_popup()</tt></li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4056</h2>
+<div class="release-date">26 November 2019</div>
+<ul>
+    <li>Fixed a crash in 4055</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4055</h2>
+<div class="release-date">25 November 2019</div>
+<ul>
+    <li>Fixed a rendering regression in 4053</li>
+    <li>Fixed saving files with hexadecimal encoding not working correctly when using non-canonical formatting</li>
+    <li>Auto Complete: Improved behavior of completions starting with non-word characters</li>
+    <li>Auto Complete: Running the <tt>auto_complete</tt> command when auto complete is already showing will re-query plugins for results</li>
+    <li>Auto Complete: Manually typing in the only available completion will hide the auto complete popup</li>
+    <li>Improved minihtml rendering performance</li>
+    <li>Linux: Fixed a wayland compatibility regression in 4054</li>
+    <li>Windows: Fixed file deletion</li>
+    <li>API: Fixed plugin profiling</li>
+    <li>API: Fixed several edge cases related to plugin loading and reloading</li>
+    <li>API: Auto Complete can be used in input panels again</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4054</h2>
+<div class="release-date">20 November 2019</div>
+<ul>
+    <li>Improved <i>Switch File</i> behavior in conjunction with multiple tabs selected</li>
+    <li>Fixed a 4053 regression where <tt>draw_centered</tt> wasn't rendering correctly</li>
+    <li>Fixed a 4053 regression where up and down arrows weren't working as expected in Goto Anything</li>
+    <li>Fixed empty buffers not displaying Phantoms</li>
+    <li>Fixed using the Command Palette to automatically prompt for missing command arguments not working correctly</li>
+    <li>Linux: Fixed tearing in full screen when using OpenGL</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4053</h2>
+<div class="release-date">19 November 2019</div>
+<ul>
+    <li>Added <i>Revert Diff Hunk</i></li>
+    <li>Improved rendering performance on very long lines</li>
+    <li>Expanded <tt>draw_unicode_white_space</tt> setting</li>
+    <li>Fixed selection matching sometimes acting as if the find panel was open when it wasn't</li>
+    <li>Fixed <tt>open_project_or_workspace</tt> opening blank windows when the workspace is already open</li>
+    <li>Auto Complete: Fixed Auto Complete incorrectly showing in widget controls</li>
+    <li>Auto Complete: Re-added support for <tt>\t</tt> characters in .sublime-completion triggers</li>
+    <li>Auto Complete: Added fallback theme rules for older themes</li>
+    <li>Auto Complete: Several minor behavior enhancements</li>
+    <li>Windows: Fixed <tt>subl --safe-mode</tt> not working as expected</li>
+    <li>Mac: Fixed an issue creating new windows when using the Adaptive theme in full screen mode</li>
+    <li>Mac: Fixed two cases where ctrl+click wasn't showing the context menu on MacOS</li>
+    <li>API: Added error reporting for invalid <tt>.python-version</tt> files</li>
+    <li>API: Fixed a backwards compatibility issue with <tt>window.get_view_index()</tt></li>
+    <li>API: Packages shipped with Sublime Text, such as <tt>HTML</tt>, can now be imported by both 3.3 and 3.8 plugins</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4052</h2>
+<div class="release-date">15 November 2019</div>
+<ul>
+    <li>Auto Complete: Added <tt>auto_complete_preserve_order</tt> setting</li>
+    <li>Auto Complete: Added <tt>auto_complete_include_snippets_when_typing</tt> setting</li>
+    <li>Auto Complete: Added <tt>auto_complete_use_index</tt> setting</li>
+    <li>Auto Complete: Fixed trailing punctuation being incorrectly added to API suggestions</li>
+    <li>Added back Expand Selection to Scope</li>
+    <li>OpenGL: Added support for <tt>selection_corner_style</tt></li>
+    <li>OpenGL: Performance improvements</li>
+    <li>OpenGL: Fixed a crash related to missing textures</li>
+    <li>Fixed <tt>trim_only_modified_white_space</tt> not working as expected when using <i>Save As</i></li>
+    <li>Fixed a crash with syntax highlighting back tracking</li>
+    <li>Fixed selecting past the last line in the Command Palette</li>
+    <li>API: Fixed compatibility with decorated EventListener methods</li>
+    <li>API: Simplified <tt>CompletionItem</tt> interface</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4051</h2>
+<div class="release-date">14 November 2019</div>
+<ul>
+    <li>Fixed annotation close buttons not showing on custom themes</li>
+    <li>Fixed navigation to unsaved files via Find in Files not working correctly</li>
+    <li>Mac: Fixed slow Goto Anything in conjunction with OpenGL rendering in some circumstances</li>
+    <li>Mac: Fixed a touch bar related memory leak</li>
+    <li>Linux: Fixed menu drawing on old versions of GTK3</li>
+    <li>Various minor crash fixes</li>
+</ul>
+</article>
+
+<article>
+<h2>Build 4050</h2>
+<div class="release-date">13 November 2019</div>
+
+<h3>GPU Rendering</h3>
+<ul class="topic">
+    <li>New <tt>hardware_acceleration</tt> setting will composite the UI on the GPU</li>
+    <li>By default, GPU rendering is enabled on Mac, and disabled on Windows and Linux</li>
+    <li>Details about the active GPU will be displayed in the Console</li>
+</ul>
+
+<h3>Context-aware Auto Complete</h3>
+<ul class="topic">
+    <li>The auto complete engine now suggests completions based on patterns in existing code</li>
+    <li>Uses the entire project as a source, instead of just the current view</li>
+    <li>Plugins may specify symbol kind info to be displayed in suggestions list</li>
+</ul>
+
+<h3>Tab Multi Select</h3>
+<ul class="topic">
+    <li>When multiple tabs are selected, their contents will be shown side-by-side</li>
+    <li>Side-by-side view is also used when selecting multiple files in sidebar</li>
+    <li>Goto Definition popup allows opening the definition using side-by-side view</li>
+</ul>
+
+<h3>Python 3.8 API</h3>
+<ul class="topic">
+    <li>Added a Python 3.8 API environment for plugins</li>
+    <li>Plugins can choose Python version via <tt>.python-version</tt> file in plugin folder</li>
+    <li>Existing plugins are fully supported via legacy Python 3.3 API</li>
+    <li>Many API improvements and additions - see API section for more details</li>
+</ul>
+
+<h3>Editor Control</h3>
+<ul class="topic">
+    <li>Build systems now use new annotations functionality instead of phantoms, reducing re-flow</li>
+    <li>Caret blinking is disabled by default. Set <tt>caret_style</tt> setting to <tt>smooth</tt> for previous behavior.</li>
+    <li>Find results are highlighted on the scroll bar</li>
+    <li>Improved automatic indentation detection</li>
+    <li><tt>trim_trailing_white_space_on_save</tt> now trims only newly inserted trailing whitespace by default. Controlled via <tt>trim_only_modified_white_space</tt> setting.</li>
+    <li>Expanded <tt>draw_white_space</tt> setting, supporting leading and trailing white space</li>
+    <li>Unicode white space characters, such as the zero width no-break space, are now drawn as hex values. Controlled via <tt>draw_unicode_white_space</tt> setting.</li>
+    <li>Fixed spelling correction to support languages with upper case characters after start of word</li>
+    <li>Linux: Text drag and drop is now supported</li>
+    <li>Linux: Added support for alternate font weight names</li>
+    <li>Linux: Selection is no longer cleared when another application makes a selection</li>
+</ul>
+
+<h3>Text Commands</h3>
+<ul class="topic">
+    <li>Improved behavior of <i>Wrap Paragraph</i></li>
+    <li>Improved behavior of <i>Swap Lines</i></li>
+    <li>Added <i>Selection/Expand Selection</i> as a general mechanism to expand the selection</li>
+    <li><i>Selection/Split into Lines</i> will now split a selection into words if the selection doesn't contain any newlines</li>
+    <li>Show a sum in the status bar when there are multiple selections and all of them are numbers</li>
+    <li>Fixed <tt>swap_line_down</tt> not being able to swap an empty line onto the last line of a file</li>
+    <li>Fixed <tt>sort_lines</tt> replacing unicode newlines with regular ones</li>
+</ul>
+
+<h3>Snippets</h3>
+<ul class="topic">
+    <li>Added <tt>auto_complete_include_snippets</tt> setting, for disabling auto complete integration</li>
+    <li>Added <tt>ignored_snippets</tt> setting, for disabling default snippets</li>
+</ul>
+
+<h3>Goto Symbol</h3>
+<ul class="topic">
+    <li>Goto Symbol in Project is now significantly faster on huge projects</li>
+    <li>Icons are now shown next to symbols, indicating the symbol kind</li>
+    <li>Symbols with 3 characters or less are now indexed</li>
+</ul>
+
+<h3>Indexing (Goto Definition)</h3>
+<ul class="topic">
+    <li>Files ignored by <tt>.gitignore</tt> are not indexed by default. Controlled via <tt>index_exclude_gitignore</tt> setting.</li>
+    <li>Files without known extensions are no longer indexed by default. Controlled via <tt>index_skip_unknown_extensions</tt> setting.</li>
+    <li>Improved behavior with constantly changing files</li>
+</ul>
+
+<h3>Input Handling</h3>
+<ul class="topic">
+    <li>Modifier key taps can now be used as part of a key binding. For example, <tt>["ctrl", "ctrl"]</tt> will trigger when <i>Ctrl</i> is pressed twice without pressing any other keys in between.</li>
+    <li>Linux: <i>AltGr</i> can now be used in key bindings via <tt>altgr</tt></li>
+    <li>Linux: Added a workaround for a touchscreen driver bug, which would cause right click and mouse scrolling to stop working</li>
+    <li>Linux: When the menu is hidden, pressing alt will show it</li>
+    <li>Mac: Fix Pinyin input</li>
+    <li>Mac: Keypad keys can now be bound to as expected</li>
+    <li>Mac: Added key bindings for macOS application tabs</li>
+    <li>Windows, Linux: Hide mouse cursor when typing. Controlled via <tt>hide_pointer_while_typing</tt> setting.</li>
+    <li>Windows, Linux: Fixed being unable to bind <i>Ctrl+Break</i></li>
+</ul>
+
+<h3>Files and Folders</h3>
+<ul class="topic">
+    <li>Saving files is now asynchronous</li>
+    <li>When <tt>save_on_focus_lost</tt> is enabled, closing an unsaved file will save and close it, instead of prompting to save</li>
+    <li>Improved behavior of <tt>save_on_focus_lost</tt> in conjunction with administrator owned files</li>
+    <li>Added <tt>reload_file_on_change</tt> setting to control if files are automatically reloaded or not</li>
+    <li>Windows: Fixed <i>Open Containing Folder</i> for UNC paths</li>
+    <li>Windows: Fixed Save dialog not showing for new files with control characters on the first line</li>
+    <li>Windows: Fixed <i>Ctrl+Backspace</i> inserting a <tt>DEL</tt> character when a dialog is open in the background</li>
+    <li>Linux: Fix recreated directories not working correctly with file change monitoring</li>
+</ul>
+
+<h3>UI</h3>
+<ul class="topic">
+    <li>Added <tt>highlight_gutter</tt> and <tt>highlight_line_number</tt> settings</li>
+    <li>Added the ability to auto hide the menu, tabs, and status bar when typing. See <tt>auto_hide_menu</tt> and related settings.</li>
+    <li>Window title bar can be controlled by <tt>show_rel_path</tt> and <tt>show_project_first</tt> settings</li>
+    <li>Tab context menu now includes <i>Close Unmodified Files</i> and <i>Close Deleted Files</i> entries</li>
+    <li>Themes now have a <tt>style</tt> property for <tt>title_bar</tt> element, for better integration with OS "dark modes"</li>
+    <li>Added <tt>glow</tt> font option to color schemes</li>
+    <li>Linux: Show sequential key bindings in the menu</li>
+    <li>Linux: Fixed context menu position being slightly offset</li>
+</ul>
+
+<h3>Rendering</h3>
+<ul class="topic">
+    <li>Windows, Linux: Added support for per-display subpixel ordering</li>
+    <li>Mac: Improved window resize performance</li>
+    <li>Windows: Fixed rendering bug where other applications could cause persistent artifacts via window animations</li>
+</ul>
+
+<h3>Application Behavior</h3>
+<ul class="topic">
+    <li>Added <i>Safe Mode</i>, to simulate a clean install. Enabled by passing <tt>--safe-mode</tt> on the command line.</li>
+    <li>Added options to <tt>hot_exit</tt> setting to control behavior when the last window is closed</li>
+    <li>Fixed a possible case where an update loses the current session</li>
+    <li>Settings containing a UTF-8 BOM will no longer fail to load</li>
+</ul>
+
+<h3>Syntax Definitions</h3>
+<ul class="topic">
+    <li>Added ability to "branch" within syntax definitions, for non-deterministic or multi-line constructs</li>
+    <li>Many syntax highlighting improvements, including significant improvements to:
+        <ul>
+            <li><i>Erlang</i>, with thanks to <a href="https://github.com/deathaxe">deathaxe</a></li>
+        </ul>
+    </li>
+    <li>Fixed a performance issue with bounded repeats in regular expressions</li>
+</ul>
+
+<h3>API</h3>
+<ul class="topic">
+    <li>minihtml now handles <tt>list-style-type</tt> CSS property - <tt>circle</tt>, <tt>square</tt> and <tt>disc</tt></li>
+    <li>Improved coverage of plugin profiling</li>
+    <li>The cProfile module is now included on Linux</li>
+    <li>
+        <tt>EventListener</tt> has many new features and bug fixes
+        <ul style="list-style-type: circle;">
+            <li>
+                <tt>on_query_completions()</tt> can now
+                <ul style="list-style-type: square;">
+                    <li>return suggestions asynchronously</li>
+                    <li>return command completions</li>
+                    <li>include symbol kind information</li>
+                </ul>
+            </li>
+            <li>New: <tt>on_init()</tt> is called once with list of views opened before plugin was loaded</li>
+            <li>New: <tt>on_exit()</tt> is called immediately before <tt>plugin_host</tt> exits, after API is shut down</li>
+            <li>New: <tt>on_text_changed()</tt> and <tt>on_text_changed_async()</tt> provide detailed modification info</li>
+            <li>New methods:
+                <ul style="list-style-type: square;">
+                    <li><tt>on_reload()</tt></li>
+                    <li><tt>on_revert()</tt></li>
+                    <li><tt>on_new_window()</tt></li>
+                    <li><tt>on_new_window_async()</tt></li>
+                    <li><tt>on_pre_close_window()</tt></li>
+                    <li><tt>on_pre_move()</tt></li>
+                    <li><tt>on_post_move()</tt></li>
+                    <li><tt>on_post_move_async()</tt></li>
+                    <li><tt>on_new_project()</tt></li>
+                    <li><tt>on_new_project_async()</tt></li>
+                    <li><tt>on_load_project()</tt></li>
+                    <li><tt>on_load_project_async()</tt></li>
+                    <li><tt>on_pre_save_project()</tt></li>
+                    <li><tt>on_post_save_project()</tt></li>
+                    <li><tt>on_post_save_project_async()</tt></li>
+                    <li><tt>on_pre_close_project()</tt></li>
+                </ul>
+            </li>
+            <li>Fixed <tt>on_selection_modified()</tt> to not be called twice when left clicking</li>
+        </ul>
+    </li>
+    <li><tt>View.add_regions()</tt> now has an <tt>annotations</tt> parameter, to allow adding a per-region annotation to the buffer. The <tt>exec</tt> command now uses this API for build errors.</li>
+    <li><tt>View.element()</tt> returns a string describing widget views (find input, quick panel input, etc)</li>
+    <li>Image filenames can be retrieved via <tt>Sheet.file_name()</tt></li>
+    <li>Syntax definitions can be queried via <tt>sublime.list_syntaxes()</tt> and <tt>sublime.find_syntax()</tt></li>
+    <li><tt>View.assign_syntax()</tt> now fully supports scope names, e.g. <tt>"scope:source.c++"</tt></li>
+    <li>Assigning a syntax no longer removes widget settings files from a widget view</li>
+    <li>Added <tt>Window.workspace_file_name()</tt></li>
+    <li>Added <tt>open_project_or_workspace</tt> command</li>
+    <li><tt>append</tt> command has new, optional <tt>disable_tab_translation</tt> argument</li>
+    <li>Improvements to the API, applied to the new Python 3.8 environment only:
+        <ul style="list-style-type: circle;">
+            <li><tt>bool(sublime.Selection())</tt> will return <tt>False</tt> when <tt>len() == 0</tt></li>
+            <li><tt>sublime.load_binary_resource()</tt> now returns <tt>bytes</tt> instead of <tt>bytearray</tt></li>
+            <li>Added <tt>Selection.__iter__()</tt></li>
+            <li>Added <tt>Region.__iter__()</tt></li>
+            <li>Added <tt>Region.__contains__()</tt></li>
+            <li><tt>Settings</tt> can now be treated like a <tt>dict</tt></li>
+            <li>Plugins starting with <tt>_</tt> will be ignored, <tt>__all__</tt> global will be respected</li>
+            <li>Events won't be reported until <tt>plugin_loaded()</tt> has been called</li>
+            <li><tt>.pyc</tt> files can now be imported when contained within <tt>.sublime-package</tt> files, although they will not be scanned for plugins</li>
+        </ul>
+    </li>
+    <li>The <tt>certifi</tt> Python package is preinstalled</li>
+    <li>Significant performance improvements when rapidly printing to the Console</li>
+</ul>
+
+<h3>OS Compatibility</h3>
+<ul class="topic">
+    <li>The following operating systems are no longer supported as a result of adding Python 3.8:
+        <ul style="list-style-type: circle;">
+            <li>OS X 10.7</li>
+            <li>OS X 10.8</li>
+            <li>Windows XP</li>
+            <li>Windows Vista</li>
+        </ul>
+    </li>
+</ul>
+</article>

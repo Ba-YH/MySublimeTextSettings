@@ -1,0 +1,664 @@
+{
+	"file_history":
+	[
+		"/D/sofewares/SublimeText/Data/Packages/User/SublimeLinter.sublime-settings",
+		"/D/sofewares/SublimeText/Data/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/D/Code/SublimeWorkspaces/Luogu/example.cpp",
+		"/D/sofewares/SublimeText/Data/Packages/SublimeLinter-gcc/miscellaneous/demo.cpp",
+		"/D/sofewares/SublimeText/Data/Packages/SublimeLinter-gcc/README.md",
+		"/D/sofewares/SublimeText/Data/Packages/SublimeLinter/keymaps/Default (Windows).sublime-keymap",
+		"/D/sofewares/SublimeText/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/D/sofewares/SublimeText/Data/Packages/Default/Default (Windows).sublime-keymap",
+		"/D/sofewares/SublimeText/Data/Packages/CppFastOlympicCoding/FastOlympicCoding (Windows).sublime-settings",
+		"/D/sofewares/SublimeText/Data/Packages/User/FastOlympicCoding.sublime-settings",
+		"/D/sofewares/SublimeText/Data/Packages/User/delete_exe_cpp_tests.sublime-build",
+		"/D/Code/SublimeWorkspaces/Luogu/c.cpp",
+		"/D/sofewares/SublimeText/Data/Packages/User/snippet/cp.sublime-snippet",
+		"/D/sofewares/SublimeText/Data/Packages/User/snippet/read.sublime-snippet",
+		"/D/sofewares/SublimeText/Data/Packages/User/snippet/hello..sublime-snippet",
+		"/D/sofewares/SublimeText/Data/Packages/delete_exe_cpp_tests.sublime-build",
+		"/D/Code/SublimeWorkspaces/Luogu/a.cpp",
+		"/D/sofewares/SublimeText/Data/Packages/User/default_file_type.sublime-settings",
+		"/D/sofewares/SublimeText/Data/Packages/Default/Preferences.sublime-settings",
+		"/D/sofewares/SublimeText/Data/Packages/User/Preferences.sublime-settings",
+		"/D/sofewares/SublimeText/Data/Packages/User/JSON.sublime-settings",
+		"/D/sofewares/SublimeText/Data/Packages/User/Default",
+		"/D/sofewares/SublimeText/Data/Packages/Default/Default",
+		"/D/sofewares/SublimeText/Data/Packages/CppFastOlympicCoding/Main.sublime-menu",
+		"/D/sofewares/SublimeText/Data/Packages/FastOlympicCodingHook/Context.sublime-menu",
+		"/D/sofewares/SublimeText/Data/Packages/FastOlympicCoding/Main.sublime-menu",
+		"/D/sofewares/SublimeText/Data/Packages/FastOlympicCoding/TestSyntax.sublime-settings",
+		"/D/sofewares/SublimeText/Data/Packages/FastOlympicCoding/FastOlympicCoding (Windows).sublime-settings",
+		"/D/sofewares/SublimeText/Data/Packages/FastOlympicCoding/Default",
+		"/D/sofewares/SublimeText/Data/Packages/User/Distraction Free.sublime-settings",
+		"/D/sofewares/SublimeText/Data/Packages/Default/Distraction Free.sublime-settings",
+		"/D/Code/SublimeWorkspaces/s.cpp",
+		"/D/Code/SublimeWorkspaces/example.cpp",
+		"/D/桌面/example.cpp",
+		"/D/桌面/d.cpp",
+		"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/c.cpp",
+		"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/d.cpp",
+		"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/Data/Packages/Color Scheme - Default/Mariana.sublime-color-scheme",
+		"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/Data/Packages/User/Mariana.sublime-color-scheme",
+		"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/Data/Packages/User/FastOlympicCoding.sublime-settings",
+		"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/Data/Packages/FastOlympicCoding/FastOlympicCoding (Windows).sublime-settings",
+		"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/Data/Packages/Default/Default (Windows).sublime-keymap"
+	],
+	"folder_history":
+	[
+	],
+	"last_version": 4164,
+	"last_window_id": 62,
+	"log_indexing": false,
+	"next_update_check": 1699698142,
+	"settings":
+	{
+		"new_window_full_screen": false,
+		"new_window_height": 600.0,
+		"new_window_maximized": true,
+		"new_window_position":
+		[
+			0.0,
+			43.2
+		],
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/C++/C++ Single File.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/delete_exe_cpp_tests.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/User/delete_exe_cpp_tests.sublime-build",
+						""
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"package",
+						"Package Control: Disable Package"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"sublime",
+						"SublimeLinter: Show All Errors"
+					],
+					[
+						"subl",
+						"SublimeLinter: Show All Errors"
+					],
+					[
+						"sublimeLin",
+						"SublimeLinter: Lint This View"
+					],
+					[
+						"sublimelinter",
+						"SublimeLinter: Show All Errors"
+					],
+					[
+						"Snippet: ",
+						"Snippet: fprintf …"
+					],
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/D/Code/SublimeWorkspaces/Luogu/example.cpp",
+				"/D/sofewares/SublimeText/Data/Packages/User/SublimeLinter.sublime-settings",
+				"/D/sofewares/SublimeText/Data/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+				"/D/sofewares/SublimeText/Data/Packages/SublimeLinter-gcc/miscellaneous/demo.cpp",
+				"/D/sofewares/SublimeText/Data/Packages/SublimeLinter-gcc/README.md",
+				"/D/Code/SublimeWorkspaces/Luogu/c.cpp",
+				"/D/sofewares/SublimeText/Data/Packages/User/snippet/cp.sublime-snippet",
+				"/D/sofewares/SublimeText/Data/Packages/User/snippet/read.sublime-snippet",
+				"/D/sofewares/SublimeText/Data/Packages/User/snippet/hello..sublime-snippet",
+				"/D/sofewares/SublimeText/Data/Packages/User/Default (Windows).sublime-keymap",
+				"/D/sofewares/SublimeText/Data/Packages/Default/Default (Windows).sublime-keymap",
+				"/D/sofewares/SublimeText/Data/Packages/delete_exe_cpp_tests.sublime-build",
+				"/D/Code/SublimeWorkspaces/Luogu/a.cpp",
+				"/D/sofewares/SublimeText/Data/Packages/User/default_file_type.sublime-settings",
+				"/D/sofewares/SublimeText/Data/Packages/CppFastOlympicCoding/Main.sublime-menu",
+				"/D/sofewares/SublimeText/Data/Packages/User/Default",
+				"/D/sofewares/SublimeText/Data/Packages/FastOlympicCodingHook/Context.sublime-menu",
+				"/D/sofewares/SublimeText/Data/Packages/FastOlympicCoding/Main.sublime-menu",
+				"/D/sofewares/SublimeText/Data/Packages/FastOlympicCoding/TestSyntax.sublime-settings",
+				"/D/Code/SublimeWorkspaces/s.cpp",
+				"/D/Code/SublimeWorkspaces/example.cpp",
+				"/D/桌面/example.cpp",
+				"/D/桌面/d.cpp",
+				"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/c.cpp",
+				"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/d.cpp",
+				"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/Data/Packages/User/FastOlympicCoding.sublime-settings",
+				"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/Data/Packages/FastOlympicCoding/FastOlympicCoding (Windows).sublime-settings"
+			],
+			"find":
+			{
+				"height": 27.2
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"scrollbar_highlights": true,
+				"show_context": true,
+				"use_buffer2": true,
+				"use_gitignore": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 27.2
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"menu_visible": true,
+			"output.SublimeLinter":
+			{
+				"height": 187.0
+			},
+			"output.astyle_error_message":
+			{
+				"height": 0.0
+			},
+			"output.exec":
+			{
+				"height": 31.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 51.2
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": false,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 800.8
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+				]
+			},
+			"buffers":
+			[
+				{
+					"contents": "#include<bits/stdc++.h>\nusing namespace std;\nusing ll  = long long;\nusing ull = unsigned long long;\n\n\n#define fi first\n#define se second\n#define pb push_back\n#define pii pair<int,int>\n#define sz(v)  (int)v.size()\n#define all(v) v.begin(),v.end()\n#define mem(a,v) memset(a,(v),sizeof(a))\n#define rep(i,a,b) for(int i=a; i<=b; i++)\n#define rep_(i,a,b) for(int i=a; i>=b; i--)\n#define de(a) cerr<<\"DEBUG:\"<<(a)<<'\\n'\n#define de2(a,b) cerr<<\"DEBUG:\"<<(a)<<' '<<(b)<<'\\n'\n#define Cout(a)  cout<<fixed<<setprecision((a))\n#define endl '\\n'\n#define eps 1e-6\n\nconst int inf = INT_MAX;\nconst ll llinf = LLONG_MAX;\nll gcd(ll a,ll b) {return b==0?a:gcd(b,a%b);}\nll qpow(ll a,ll b,ll p){ll s=1;while(b){if(b&1)s=(s*a)%p;b>>=1;a=(a*a)%p;}return s;}\n\nconst int N = 2e5+10;\nint n,q,pre[N],suf[N],b[N],x;\nvoid solve(){\n    cin>>n>>q;\n    suf[0]=-1;\n    rep(i,1,n){\n        cin>>b[i];\n        pre[i] = suf[i-1] + 1;\n        suf[i] = pre[i] + b[i]-1;\n        // cerr<<pre[i]<<\" \"<<suf[i]<<\" \"<<endl;\n    }\n    //要找<=x的最大值\n    rep(i,1,q){\n        cin>>x;\n        int l=0,r=n+1;\n        while(r!=l+1){\n            int mid =(l+r)/2;\n            if(pre[mid] <= x) l=mid;\n            else r=mid;\n        }\n        cout<<l<<endl;\n    }\n}\nsigned main(){\n    ios::sync_with_stdio(false),cin.tie(nullptr),cout.tie(nullptr);\n    // freopen(\".in\",\"r\",stdin);\n    // freopen(\".out\",\"w\",stdout);\n    int T = 1;\n    // cin >> T;\n    rep(_,1,T){\n        // cout<<\"Case #\"<<_<<\": \";\n        solve();\n    }\n    return 0;\n}",
+					"file": "/D/Code/SublimeWorkspaces/Luogu/example.cpp",
+					"file_size": 1557,
+					"file_write_time": 133441561236600754,
+					"settings":
+					{
+						"buffer_size": 1486,
+						"encoding": "UTF-8",
+						"line_ending": "Windows"
+					},
+					"undo_stack":
+					[
+						[
+							9,
+							1,
+							"left_delete",
+							null,
+							"AQAAALMEAAAAAAAAswQAAAAAAAABAAAAOw",
+							"AQAAAAAAAAABAAAAtAQAAAAAAAC0BAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							22,
+							1,
+							"insert",
+							{
+								"characters": ";"
+							},
+							"AQAAALMEAAAAAAAAtAQAAAAAAAAAAAAA",
+							"AQAAAAAAAAABAAAAswQAAAAAAACzBAAAAAAAAAAAAAAAAPC/"
+						]
+					]
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						]
+					],
+					[
+						"Packages/C++/C++ Single File.sublime-build",
+						""
+					]
+				],
+				[
+					[
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							""
+						],
+						[
+							"Packages/C++/C++ Single File.sublime-build",
+							"Run"
+						],
+						[
+							"Packages/User/delete_exe_cpp_tests.sublime-build",
+							""
+						]
+					],
+					[
+						"Packages/User/delete_exe_cpp_tests.sublime-build",
+						""
+					]
+				]
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"package",
+						"Package Control: Disable Package"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"sublime",
+						"SublimeLinter: Show All Errors"
+					],
+					[
+						"subl",
+						"SublimeLinter: Show All Errors"
+					],
+					[
+						"sublimeLin",
+						"SublimeLinter: Lint This View"
+					],
+					[
+						"sublimelinter",
+						"SublimeLinter: Show All Errors"
+					],
+					[
+						"Snippet: ",
+						"Snippet: fprintf …"
+					],
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/D/sofewares/SublimeText/Data/Packages/User/SublimeLinter.sublime-settings",
+				"/D/sofewares/SublimeText/Data/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+				"/D/Code/SublimeWorkspaces/Luogu/example.cpp",
+				"/D/sofewares/SublimeText/Data/Packages/SublimeLinter-gcc/miscellaneous/demo.cpp",
+				"/D/sofewares/SublimeText/Data/Packages/SublimeLinter-gcc/README.md",
+				"/D/Code/SublimeWorkspaces/Luogu/c.cpp",
+				"/D/sofewares/SublimeText/Data/Packages/User/snippet/cp.sublime-snippet",
+				"/D/sofewares/SublimeText/Data/Packages/User/snippet/read.sublime-snippet",
+				"/D/sofewares/SublimeText/Data/Packages/User/snippet/hello..sublime-snippet",
+				"/D/sofewares/SublimeText/Data/Packages/User/Default (Windows).sublime-keymap",
+				"/D/sofewares/SublimeText/Data/Packages/Default/Default (Windows).sublime-keymap",
+				"/D/sofewares/SublimeText/Data/Packages/delete_exe_cpp_tests.sublime-build",
+				"/D/Code/SublimeWorkspaces/Luogu/a.cpp",
+				"/D/sofewares/SublimeText/Data/Packages/User/default_file_type.sublime-settings",
+				"/D/sofewares/SublimeText/Data/Packages/CppFastOlympicCoding/Main.sublime-menu",
+				"/D/sofewares/SublimeText/Data/Packages/User/Default",
+				"/D/sofewares/SublimeText/Data/Packages/FastOlympicCodingHook/Context.sublime-menu",
+				"/D/sofewares/SublimeText/Data/Packages/FastOlympicCoding/Main.sublime-menu",
+				"/D/sofewares/SublimeText/Data/Packages/FastOlympicCoding/TestSyntax.sublime-settings",
+				"/D/Code/SublimeWorkspaces/s.cpp",
+				"/D/Code/SublimeWorkspaces/example.cpp",
+				"/D/桌面/example.cpp",
+				"/D/桌面/d.cpp",
+				"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/c.cpp",
+				"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/d.cpp",
+				"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/Data/Packages/User/FastOlympicCoding.sublime-settings",
+				"/D/桌面/SublimeText_4164_64bit_Green/SublimeText/Data/Packages/FastOlympicCoding/FastOlympicCoding (Windows).sublime-settings"
+			],
+			"find":
+			{
+				"height": 27.2
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"scrollbar_highlights": true,
+				"show_context": true,
+				"use_buffer2": true,
+				"use_gitignore": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/D/Code/SublimeWorkspaces/Luogu/example.cpp",
+							"selected": true,
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 1486,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1288,
+										1288
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/C++/C++.sublime-syntax",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 540.8,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"stack_multiselect": false,
+							"type": "text"
+						}
+					]
+				},
+				{
+					"sheets":
+					[
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 27.2
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					],
+					[
+						1,
+						0,
+						2,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					0.610416666667,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.SublimeLinter":
+			{
+				"height": 187.0
+			},
+			"output.astyle_error_message":
+			{
+				"height": 0.0
+			},
+			"output.exec":
+			{
+				"height": 31.0
+			},
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,2,3,-1,-1,-1,-1,749,91,91,906,b768be2b42122643a2e6d65e3caea929",
+			"project": "",
+			"replace":
+			{
+				"height": 51.2
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": false,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 62,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

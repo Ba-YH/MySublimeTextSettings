@@ -1,0 +1,17 @@
+{
+	"bootstrapped": true,
+	"installed_packages":
+	[
+		"CppFastOlympicCoding",
+		"Default File Type",
+		"Package Control",
+		"SublimeAStyleFormatter",
+		"SublimeLinter",
+		"SublimeLinter-cppcheck",
+		"SublimeLinter-cpplint",
+		"SublimeLinter-gcc",
+	],
+	"in_process_packages":
+	[
+	],
+}

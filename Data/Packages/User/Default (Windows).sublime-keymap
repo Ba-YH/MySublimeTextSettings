@@ -1,0 +1,22 @@
+[
+	{
+		"keys": ["ctrl+shift+o"],
+		"command": "fast_olympic_coding_hook"
+	},
+	{
+        "keys": ["ctrl+shift+c"],
+        "command": "build",
+        "args": {"select": "delete_exe_cpp_tests"},
+        "context": [
+            { "key": "selector", "operator": "equal", "operand": "source" }
+        ]
+    },
+    {
+     "keys": ["ctrl+shift+a"],
+      "command": "sublime_linter_panel_toggle"
+       },
+    { 
+        "keys": ["ctrl+k"], 
+        "command": "sublime_linter_lint" 
+    },
+]

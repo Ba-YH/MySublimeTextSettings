@@ -1,0 +1,31 @@
+{
+	"lint_error_region_scope": false,
+	"run_settings": 
+	[
+		{
+			"name": "C++",
+			"extensions": ["cpp"],
+			"compile_cmd": "g++ \"{source_file}\" -std=c++17 -o \"{file_name}\"",
+			"run_cmd": "\"{source_file_dir}\\{file_name}.exe\" {args} -debug",
+
+			"lint_compile_cmd": "g++ -std=gnu++17 \"{source_file}\" -I \"{source_file_dir}\""
+		},
+
+		{
+			"name": "Python",
+			"extensions": ["py"],
+			"compile_cmd": null,
+			"run_cmd": "python \"{source_file}\""
+		},
+		
+		{
+			"name": "Java",
+			"extensions": ["java"],
+			"compile_cmd": "javac -J-Dfile.encoding=utf8 -d \"{source_file_dir}\" \"{source_file}\"",
+			"run_cmd": "java -classpath \"{source_file_dir}\" \"{file_name}\""
+		},
+	],
+	"stress_time_limit_seconds": 3,
+    
+	"tests_file_suffix":  "__tests",
+}

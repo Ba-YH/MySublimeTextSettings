@@ -1,0 +1,37 @@
+// {
+//     "linters":{
+//         "linter_name":{
+//             "disable" : false,
+//             "executable" : ["D:\\sofewares\\cppcheck\\cppcheck.exe"]
+//         }
+//     }
+// }
+{
+  "debug": true,
+  "linters": {
+    "g++": {
+      "disable": false,
+      // "lint_mode": "save",
+      "lint_mode": "manual",
+
+      "c_executable": "gcc",
+      "c_extra_flags": [
+        "-fsyntax-only",
+        "-std=c90",
+      ],
+
+      "c++_executable": "g++",
+      "c++_extra_flags": [
+        "-fsyntax-only",
+        "-std=c++17",
+      ],
+      
+      "include_dirs": [
+        "${project_folder}/include",
+        "C:\\MinGW\\mingw64\\include",
+      ],
+    },
+
+
+    }
+}

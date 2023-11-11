@@ -1,0 +1,6 @@
+[
+  {   
+       "keys" : ["ctrl + shift + x"],
+       "command": "fast_olympic_coding_hook"
+  },
+]

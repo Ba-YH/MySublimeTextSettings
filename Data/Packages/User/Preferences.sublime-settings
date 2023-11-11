@@ -1,0 +1,12 @@
+{
+	"font_face": "Fira Code",
+	"foot-size": 16,
+	"ignored_packages":
+	[
+		"SublimeLinter-cppcheck",
+		"SublimeLinter-cpplint",
+		"Vintage",
+	],
+	"theme": "Default Dark.sublime-theme",
+	"color_scheme": "Monokai.sublime-color-scheme",
+}
