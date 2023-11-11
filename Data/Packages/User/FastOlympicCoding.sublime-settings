@@ -1,4 +1,5 @@
 {
+	"lint_enabled": false,
 	"lint_error_region_scope": false,
 	"run_settings": 
 	[
