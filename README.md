@@ -10,7 +10,7 @@
 
 ## 使用说明
 
-git clone或者下载压缩包，点击`sublime_text.exe`即可运行
+二进制文件，点击`sublime_text.exe`即可运行
 
 ## 快捷键说明
 
