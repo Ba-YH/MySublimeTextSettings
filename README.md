@@ -19,7 +19,7 @@ git clone或者下载压缩包，点击`sublime_text.exe`即可运行
 | Listen to CC                             | ctrl+shift+o          | 设置->热键设置中修改<br />"command": "fast_olympic_coding_hook"” |
 | 运行测试用例                             | ctrl+‘                | 在 `SublimeText\Data\Packages\CppFastOlympicCoding\Default(windows).sublime-keymap`中修改 |
 | 删除exe和__tests文件                     | ctrl+shift+c          | 设置->热键设置中修改                                         |
-| G++语言检查器<br />开始检查/显示所有错误 | ctrl+k / ctrl+shift+a | 在`设置->packages settings->sublimelinet->key bindings`进行修改 |
+|开始检查/<br>显示所有错误 | ctrl+k / ctrl+shift+a | 在`设置->packages settings->sublimelinet->key bindings`进行修改<br>sublimelinter还有丰富的快捷键 |
 
 ## 其它指南
 
